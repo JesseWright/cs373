@@ -1,0 +1,13 @@
+__pycache__
+.coverage
+.DS_Store
+.pylintrc
+*.pyc
+collatz-tests
+Collatz.html
+Collatz.log
+CS373.bbprojectd
+Icon?
+RunCollatz.tmp
+TestCollatz.tmp
+tests
