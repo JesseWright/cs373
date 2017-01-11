@@ -12,7 +12,6 @@ install:
     - pip install autopep8
     - pip install coverage
     - pip install numpy
-    - pip install pydoc
     - pip install pylint
 
 before_script:
