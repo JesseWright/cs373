@@ -33,7 +33,7 @@ ifeq ($(shell uname), Darwin)          # Apple
     AUTOPEP8 := autopep8
 else ifeq ($(CI), true)                # Travis CI
     PYTHON   := python3.5
-    PIP      := pip
+    PIP      := pip3.5
     PYLINT   := pylint
     COVERAGE := coverage-3.5
     PYDOC    := pydoc3.5
