@@ -258,8 +258,8 @@ versions:
 	which $(COVERAGE)
 	$(COVERAGE) --version
 	@echo
-	which $(PYDOC)
-	$(PYDOC) --version
+	-which $(PYDOC)
+	-$(PYDOC) --version
 	@echo
 	which $(AUTOPEP8)
 	$(AUTOPEP8) --version
