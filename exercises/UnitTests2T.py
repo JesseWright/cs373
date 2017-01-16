@@ -46,7 +46,7 @@ if __name__ == "__main__" :
 FAIL: test_2 (__main__.MyUnitTests)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "./UnitTests2T.py", line 34, in test_2
+  File "UnitTests2T.py", line 34, in test_2
     self.assertEqual(cycle_length( 5), 5)
 AssertionError: 6 != 5
 

@@ -25,18 +25,18 @@ Python is procedural, object-oriented, dynamically typed, and garbage collected.
 
 
 % python --version
-Python 2.7.10
+Python 2.7.12
 
 
-% which python3.5
-/usr/local/bin/python3.5
+% which python3
+/usr/local/bin/python3
 
 
-% python3.5 --version
+% python3 --version
 Python 3.5.2
 
 
-% python3.5 ./Hello.py
+% python3 ./Hello.py
 Nothing to be done.
 
 
@@ -47,7 +47,7 @@ Nothing to be done.
 
 
 
-% python3.5
+% python3
 Python 3.5.2 (default, Aug 22 2016, 14:49:41)
 [GCC 4.8.4] on linux
 Type "help", "copyright", "credits" or "license" for more information.
@@ -60,20 +60,7 @@ Nothing to be done.
 >>> quit()
 
 
-% python3.5 -m cProfile Hello.py
-Nothing to be done.
-         4 function calls in 0.000 seconds
-
-   Ordered by: standard name
-
-   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-        1    0.000    0.000    0.000    0.000 Hello.py:16(<module>)
-        1    0.000    0.000    0.000    0.000 {built-in method builtins.exec}
-        1    0.000    0.000    0.000    0.000 {built-in method builtins.print}
-        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
-
-
-% python3.5
+% python3
 Python 3.5.2 (default, Aug 22 2016, 14:49:41)
 [GCC 4.8.4] on linux
 Type "help", "copyright", "credits" or "license" for more information.
@@ -184,7 +171,7 @@ has the same effect as typing a particular string at the help> prompt.
 >>> quit()
 
 
-% python3.5
+% python3
 Python 3.5.2 (default, Aug 22 2016, 14:49:41)
 [GCC 4.8.4] on linux
 Type "help", "copyright", "credits" or "license" for more information.
@@ -216,7 +203,7 @@ Namespaces are one honking great idea -- let's do more of those!
 >>> quit()
 
 
-% python3.5
+% python3
 Python 3.5.2 (default, Aug 22 2016, 14:49:41)
 [GCC 4.8.4] on linux
 Type "help", "copyright", "credits" or "license" for more information.

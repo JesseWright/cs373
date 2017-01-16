@@ -25,10 +25,12 @@ if __name__ == "__main__" :
 """ #pragma: no cover
 % coverage-3.5 run --branch Coverage3T.py
 .
+.
 ----------------------------------------------------------------------
 Ran 1 test in 0.000s
 
 OK
+
 
 
 % coverage-3.5 report -m

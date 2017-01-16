@@ -17,7 +17,6 @@ install:
 before_script:
     - uname -a
     - printenv | sort
-    - ls -al /home/travis/virtualenv/python3.5.2/bin/
     - make versions
 
 script:

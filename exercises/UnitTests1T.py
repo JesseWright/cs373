@@ -36,9 +36,9 @@ FFF
 FAIL: test_1 (__main__.MyUnitTests)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "./UnitTests1T.py", line 21, in test_1
+  File "UnitTests1T.py", line 21, in test_1
     self.assertEqual(cycle_length( 1), 1)
-  File "/Users/downing/Dropbox/exercises/python/UnitTests1.py", line 20, in cycle_length
+  File "/v/filer4b/v41q001/downing/public_html/exercises/python/UnitTests1.py", line 20, in cycle_length
     assert c > 0
 AssertionError
 
@@ -46,7 +46,7 @@ AssertionError
 FAIL: test_2 (__main__.MyUnitTests)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "./UnitTests1T.py", line 24, in test_2
+  File "UnitTests1T.py", line 24, in test_2
     self.assertEqual(cycle_length( 5), 6)
 AssertionError: 5 != 6
 
@@ -54,7 +54,7 @@ AssertionError: 5 != 6
 FAIL: test_3 (__main__.MyUnitTests)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "./UnitTests1T.py", line 27, in test_3
+  File "UnitTests1T.py", line 27, in test_3
     self.assertEqual(cycle_length(10), 7)
 AssertionError: 6 != 7
 

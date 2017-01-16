@@ -22,8 +22,8 @@ else ifeq ($(shell uname -p), unknown) # Docker
     PYDOC    := pydoc3.5
     AUTOPEP8 := autopep8
 else                                   # UTCS
-    PYTHON   := python3.5
-    PIP      := pip3.5
+    PYTHON   := python3
+    PIP      := pip3
     PYLINT   := pylint3
     COVERAGE := coverage-3.5
     PYDOC    := pydoc3.5
@@ -34,8 +34,6 @@ clean:
 	cd examples; make clean
 	@echo
 	cd exercises; make clean
-	@echo
-	cd projects/collatz; make clean
 
 config:
 	git config -l
@@ -77,7 +75,6 @@ push:
 	git add makefile
 	git add notes
 	git add patterns
-	git add projects/collatz
 	git commit -m "another commit"
 	git push
 	git status
@@ -114,130 +111,12 @@ sync:
     --exclude "*"                            \
     ../../exercises/python/ exercises
 
-#    --include "Exceptions.py"                \
-#    --include "Variables.py"                 \
-#    --include "Copy.py"                      \
-#    --include "Types.py"                     \
-#    --include "Operators.py"                 \
-#    --include "Cache.py"                     \
-#    --include "Iteration.py"                 \
-#    --include "Lambdas.py"                   \
-#    --include "Comprehensions.py"            \
-#    --include "Yield.py"                     \
-#    --include "Iterables.py"                 \
-#    --include "Itertools.py"                 \
-#    --include "Functions.py"                 \
-#    --include "FunctionKeywords.py"          \
-#    --include "FunctionDefaults.py"          \
-#    --include "FunctionUnpacking.py"         \
-#    --include "FunctionTuple.py"             \
-#    --include "FunctionDict.py"              \
-#    --include "Classes.py"                   \
-#    --include "Callables.py"                 \
-#    --include "RegExps.py"                   \
-#    --include "Reflection.py"                \
-#
-#    --include "IsPrime2.py"                  \
-#    --include "IsPrime2T.py"                 \
-#    --include "Factorial.py"                 \
-#    --include "FactorialT.py"                \
-#    --include "Reduce.py"                    \
-#    --include "ReduceT.py"                   \
-#    --include "RMSE.py"                      \
-#    --include "RMSET.py"                     \
-#    --include "Map.py"                       \
-#    --include "MapT.py"                      \
-#    --include "RangeIterator.py"             \
-#    --include "RangeIteratorT.py"            \
-#    --include "Range.py"                     \
-#    --include "RangeT.py"                    \
-#    --include "Decorators.py"                \
-#    --include "DecoratorsT.py"               \
-#    --include "Complex.py"                   \
-#    --include "ComplexT.py"                  \
-#    --include "Select.py"                    \
-#    --include "SelectT.py"                   \
-#    --include "Project.py"                   \
-#    --include "ProjectT.py"                  \
-#    --include "CrossJoin.py"                 \
-#    --include "CrossJoinT.py"                \
-#    --include "ThetaJoin.py"                 \
-#    --include "ThetaJoinT.py"                \
-#    --include "NaturalJoin.py"               \
-#    --include "NaturalJoinT.py"              \
-#
-#	@rsync -r -t -u -v --delete              \
-#    --include "Bookstore1.dtd.xml"           \
-#    --include "Bookstore1.xml"               \
-#    --include "Bookstore2.dtd.xml"           \
-#    --include "Bookstore3.xml"               \
-#    --include "Bookstore3.xsd.xml"           \
-#    --exclude "*"                            \
-#    ../../examples/xml/ examples
-#
-#	@rsync -r -t -u -v --delete              \
-#    --include "Bookstore.json"               \
-#    --include "Bookstore.schema.json"        \
-#    --exclude "*"                            \
-#    ../../examples/json/ examples
-
-#	@rsync -r -t -u -v --delete              \
-#    --include "ShowDatabases.sql"            \
-#    --include "ShowEngines.sql"              \
-#    --include "Create.sql"                   \
-#    --include "Select.sql"                   \
-#    --include "Join.sql"                     \
-#    --include "Subqueries.sql"               \
-#    --include "Aggregation.sql"              \
-#    --exclude "*"                            \
-#    ../../examples/sql/ examples
-
-#	@rsync -r -t -u -v --delete              \
-#    --include "MethodOverriding1.java"       \
-#    --include "MethodOverriding2.java"       \
-#    --include "DynamicBinding.java"          \
-#    --include "Reflection.java"              \
-#    --exclude "*"                            \
-#    ../../examples/java/ examples
-
-#	@rsync -r -t -u -v --delete              \
-#    --include "StrategyPattern9.py"          \
-#    --exclude "*"                            \
-#    ../../patterns/python/ patterns
-
-#	@rsync -r -t -u -v --delete              \
-#    --include "StrategyPattern1.java"        \
-#    --include "StrategyPattern2.java"        \
-#    --include "StrategyPattern3.java"        \
-#    --include "StrategyPattern4.java"        \
-#    --include "StrategyPattern5.java"        \
-#    --include "StrategyPattern6.java"        \
-#    --include "SingletonPattern.java"        \
-#    --include "SingletonPatternT.java"       \
-#    --include "StrategyPattern7.java"        \
-#    --include "StrategyPattern8.java"        \
-#    --include "StrategyPattern9.java"        \
-#    --exclude "*"                            \
-#    ../../patterns/java/ patterns
-
-#	@rsync -r -t -u -v --delete              \
-#    --include "Collatz.py"                   \
-#    --include "RunCollatz.in"                \
-#    --include "RunCollatz.py"                \
-#    --include "RunCollatz.out"               \
-#    --include "TestCollatz.py"               \
-#    --include "TestCollatz.out"              \
-#    --exclude "*"                            \
-#    ../../projects/python/collatz/ projects/collatz
-
 test:
 	make clean
 	@echo
 	cd examples; make test
 	@echo
 	cd exercises; make test
-#	@echo
-#	cd projects/collatz; make test
 
 versions:
 	which make
