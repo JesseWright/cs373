@@ -74,7 +74,6 @@ push:
 	git add exercises
 	git add makefile
 	git add notes
-	git add patterns
 	git commit -m "another commit"
 	git push
 	git status
