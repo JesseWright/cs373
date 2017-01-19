@@ -3,27 +3,6 @@
 FILES :=              \
     Hello
 
-#    Exceptions        \
-#    Variables         \
-#    Copy              \
-#    Types             \
-#    Operators         \
-#    Cache             \
-#    Iteration         \
-#    Comprehensions    \
-#    Yield             \
-#    Iterables         \
-#    Itertools         \
-#    FunctionKeywords  \
-#    FunctionDefaults  \
-#    FunctionUnpacking \
-#    FunctionTuple     \
-#    FunctionDict      \
-#    Lambdas           \
-#    Functions         \
-#    Classes           \
-#    Callables
-
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3.5
     PIP      := pip3.5

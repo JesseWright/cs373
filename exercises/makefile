@@ -7,16 +7,6 @@ FILES :=            \
     Coverage3T      \
     IsPrime1T
 
-#    FactorialT     \
-#    ReduceT        \
-#    MapT           \
-#    RangeIteratorT \
-#    RangeT         \
-#    DecoratorsT    \
-#    ComplexT       \
-#    SelectT        \
-#    ProjectT
-
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3.5
     PIP      := pip3.5
