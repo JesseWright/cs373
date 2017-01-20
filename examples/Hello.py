@@ -36,13 +36,13 @@ Python 2.7.12
 Python 3.5.2
 
 
-% python3 ./Hello.py
+% python3 Hello.py
 Nothing to be done.
 
 
 
 % chmod ugo+x Hello.py
-% Hello.py
+% ./Hello.py
 Nothing to be done.
 
 

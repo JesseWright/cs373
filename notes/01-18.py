@@ -2,8 +2,9 @@
 Wed, 18 Jan
 -----------
 
-#   is Python's line  comment
-""" is Python's block comment
+"""
+pound  sign   is Python's line  comment
+triple quotes is Python's block comment
 
 Collatz Conjecture
 
@@ -17,3 +18,4 @@ repeat until 1
 
 cycle length of 5 is 6
 cycle length of 10 is 7
+"""
