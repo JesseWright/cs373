@@ -1,0 +1,10 @@
+__pycache__
+.coverage
+.DS_Store
+.pylintrc
+*.pyc
+Collatz.html
+Collatz.log
+Icon?
+RunCollatz.tmp
+TestCollatz.tmp
