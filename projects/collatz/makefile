@@ -51,7 +51,7 @@ endif
 	$(PYLINT) --disable=locally-disabled --reports=no --generate-rcfile > $@
 
 collatz-tests:
-	git clone https://github.com/cs373g-fall-2016/collatz-tests.git
+	git clone https://github.com/cs373t-spring-2017/collatz-tests.git
 
 Collatz.html: Collatz.py
 	pydoc3 -w Collatz
@@ -136,8 +136,8 @@ versions:
 	which $(COVERAGE)
 	$(COVERAGE) --version
 	@echo
-	which $(PYDOC)
-	$(PYDOC) --version
+	-which $(PYDOC)
+	-$(PYDOC) --version
 	@echo
 	which $(AUTOPEP8)
 	$(AUTOPEP8) --version
