@@ -34,6 +34,8 @@ clean:
 	cd examples; make clean
 	@echo
 	cd exercises; make clean
+	@echo
+	cd projects/collatz; make clean
 
 config:
 	git config -l
@@ -126,6 +128,8 @@ test:
 	cd examples; make test
 	@echo
 	cd exercises; make test
+	@echo
+	cd projects/collatz; make test
 
 versions:
 	which make
