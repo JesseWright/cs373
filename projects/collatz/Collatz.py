@@ -16,8 +16,8 @@
 
 def collatz_read (r) :
     """
+    read an int from r
     r a reader
-    read one int from r
     return the int
     """
     n = int(r.readline())
@@ -45,9 +45,9 @@ def collatz_eval (n) :
 
 def collatz_print (w, m) :
     """
+    print an int to w
     w a writer
     m the max cycle length
-    print m to w
     """
     assert m > 0
     w.write(str(m) + "\n")
