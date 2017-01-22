@@ -72,6 +72,7 @@ push:
 	git add Dockerfile
 	git add examples
 	git add exercises
+	git add projects
 	git add makefile
 	git add notes
 	git commit -m "another commit"
@@ -109,6 +110,15 @@ sync:
     --include "IsPrime1T.py"                 \
     --exclude "*"                            \
     ../../exercises/python/ exercises
+	@rsync -r -t -u -v --delete              \
+    --include "Collatz.py"                   \
+    --include "RunCollatz.in"                \
+    --include "RunCollatz.py"                \
+    --include "RunCollatz.out"               \
+    --include "TestCollatz.py"               \
+    --include "TestCollatz.out"              \
+    --exclude "*"                            \
+    ../../projects/python/collatz/ projects/collatz
 
 test:
 	make clean
