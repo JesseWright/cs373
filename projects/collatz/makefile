@@ -115,7 +115,7 @@ status:
 	git remote -v
 	git status
 
-test: Collatz.html Collatz.log RunCollatz.tmp TestCollatz.tmp collatz-tests check
+test: Collatz.html Collatz.log RunCollatz.tmp TestCollatz.tmp collatz-tests
 
 versions:
 	which make
