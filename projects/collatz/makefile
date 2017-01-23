@@ -1,5 +1,3 @@
-.PHONY: Collatz.log
-
 .DEFAULT_GOAL := test
 
 FILES :=                              \
@@ -12,6 +10,8 @@ FILES :=                              \
     TestCollatz.out                   \
     TestCollatz.py
 
+# uncomment these:
+#    .travis.yml                       \
 #    collatz-tests/EID-RunCollatz.in   \
 #    collatz-tests/EID-RunCollatz.out  \
 #    collatz-tests/EID-TestCollatz.out \
