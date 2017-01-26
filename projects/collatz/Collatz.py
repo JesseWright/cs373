@@ -31,7 +31,7 @@ def collatz_read (r) :
 def collatz_eval (n) :
     """
     n the end of the range [1, n], inclusive
-    return the max cycle length of the range [1, n]
+    return the value that produces the max cycle length of the range [1, n]
     """
     # <your code>
     assert n > 0
