@@ -1,19 +1,19 @@
 .DEFAULT_GOAL := test
 
-FILES :=                              \
-    Collatz.html                      \
-    Collatz.log                       \
-    Collatz.py                        \
-    RunCollatz.in                     \
-    RunCollatz.out                    \
-    RunCollatz.py                     \
-    TestCollatz.out                   \
+FILES :=            \
+    Collatz.html    \
+    Collatz.log     \
+    Collatz.py      \
+    RunCollatz.in   \
+    RunCollatz.out  \
+    RunCollatz.py   \
+    TestCollatz.out \
     TestCollatz.py
 
 # uncomment these:
-#    .travis.yml                       \
-#    collatz-tests/EID-RunCollatz.in   \
-#    collatz-tests/EID-RunCollatz.out  \
+#    .travis.yml                           \
+#    collatz-tests/GitHubID-RunCollatz.in  \
+#    collatz-tests/GitHubID-RunCollatz.out \
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3.5
