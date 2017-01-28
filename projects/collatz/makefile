@@ -65,8 +65,8 @@ RunCollatz.tmp: Collatz.py RunCollatz.in RunCollatz.out RunCollatz.py .pylintrc
 
 TestCollatz.tmp: Collatz.py TestCollatz.py .pylintrc
 	-$(PYLINT) TestCollatz.py
-	$(COVERAGE) run    --branch TestCollatz.py >  TestCollatz.tmp 2>&1
-	$(COVERAGE) report -m                      >> TestCollatz.tmp
+	-$(COVERAGE) run    --branch TestCollatz.py >  TestCollatz.tmp 2>&1
+	-$(COVERAGE) report -m                      >> TestCollatz.tmp
 	cat TestCollatz.tmp
 
 check:
