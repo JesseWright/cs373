@@ -48,4 +48,6 @@ assert issubclass(Exception,     BaseException)
 assert issubclass(NameError,     BaseException)
 assert issubclass(BaseException, object)
 
+assert issubclass(type, object)
+
 print("Done.")
