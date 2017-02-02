@@ -94,7 +94,11 @@ sync:
     --include "Hello.py"                     \
     --include "Assertions.py"                \
     --include "Exceptions.py"                \
+    --include "Types.py"                     \
+    --include "Operators.py"                 \
     --include "Variables.py"                 \
+    --include "Copy.py"                      \
+    --include "Cache.py"                     \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete              \
