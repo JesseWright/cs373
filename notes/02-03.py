@@ -51,9 +51,10 @@ i = 3 # ok,     i is an l-value
 
 k = (i += j); # not ok
 
-# Python operators do something or return something, but not both
-# there is no pre-increment or post-increment operator
+"""
+Python operators do something or return something, but not both
+there is no pre-increment or post-increment operator
 
-# true division always returns a float
-# floor division with ints returns an int, with floats returns a float
-
+true division always returns a float
+floor division with ints returns an int, with floats returns a float
+"""
