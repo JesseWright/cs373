@@ -16,6 +16,12 @@ list
     mutable
     not hashable
     constructor takes an iterable of anything
+    index, O(1)
+    insertion at begin or middle, O(n)
+    insertion at end if full, O(n)
+    insertion at end, if not full, O(1)
+    removal at begin or middle, O(n)
+    removal at end, O(1)
 
 tuple
     indexable
@@ -26,24 +32,26 @@ tuple
 
 set
     iterable, not indexable
-    unordered
+    unordered, no duplicates
     mutable
     not hashable
     constructor takes an iterable of hashables
+    insertion, removal, O(1)
 
 frozenset
     iterable, not indexable
-    unordered
+    unordered, no duplicates
     immutable
     hashable
     constructor takes an iterable of hashables
 
 dict
     iterable, not indexable
-    unordered
+    unordered, no duplicate keys
     mutable
     not hashable
     constructor takes an iterable of iterables of key, value pairs; keys must be hashable
+    insertion, removal, O(1)
 """
 
 i = 3 # ok,     i is an l-value
