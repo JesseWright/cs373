@@ -118,6 +118,7 @@ sync:
     --include "IsPrime1T.py"                 \
     --include "IsPrime2.py"                  \
     --include "IsPrime2T.py"                 \
+    --include "Factorial.py"                 \
     --exclude "*"                            \
     ../../exercises/python/ exercises
 	@rsync -r -t -u -v --delete              \
