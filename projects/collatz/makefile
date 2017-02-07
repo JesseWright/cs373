@@ -48,6 +48,7 @@ endif
 .pylintrc:
 	$(PYLINT) --disable=locally-disabled --reports=no --generate-rcfile > $@
 
+.PHONY: collatz-tests
 collatz-tests:
 	git clone https://github.com/cs373t-spring-2017/collatz-tests.git
 
