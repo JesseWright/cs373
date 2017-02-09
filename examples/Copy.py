@@ -15,6 +15,8 @@ print("Copy.py")
 
 x = [2, 3, 4]
 
+assert x[1]   == 3
+assert x[-1]  == 4
 assert x[1:2] == [3]
 assert x[1:3] == [3, 4]
 assert x[0:3] == [2, 3, 4]
