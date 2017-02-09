@@ -1,7 +1,13 @@
 .DEFAULT_GOAL := test
 
 FILES :=              \
-    Hello
+    Hello             \
+    Exceptions        \
+    Types             \
+    Operators         \
+    Variables         \
+    Copy              \
+    Cache
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3.5
