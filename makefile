@@ -99,6 +99,9 @@ sync:
     --include "Variables.py"                 \
     --include "Copy.py"                      \
     --include "Cache.py"                     \
+    --include "Iteration.py"                 \
+    --include "Lambdas.py"                   \
+    --include "Comprehensions.py"            \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete              \
