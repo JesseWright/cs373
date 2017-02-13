@@ -123,8 +123,9 @@ sync:
     --include "IsPrime2T.py"                 \
     --include "Factorial.py"                 \
     --include "FactorialT.py"                \
-    --include "RMSET.py"                     \
+    --include "Reduce.py"                    \
     --include "ReduceT.py"                   \
+    --include "RMSET.py"                     \
     --exclude "*"                            \
     ../../exercises/python/ exercises
 	@rsync -r -t -u -v --delete              \
