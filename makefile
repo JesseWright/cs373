@@ -120,6 +120,7 @@ sync:
     --include "IsPrime2T.py"                 \
     --include "Factorial.py"                 \
     --include "FactorialT.py"                \
+    --include "RMSET.py"                     \
     --include "ReduceT.py"                   \
     --exclude "*"                            \
     ../../exercises/python/ exercises
