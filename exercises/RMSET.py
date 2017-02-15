@@ -34,27 +34,27 @@ class MyUnitTests (TestCase) :
             rmse_zip_generator_sum,
             rmse_numpy]
 
-    def test_0 (self) :
+    def test_1 (self) :
         for f in self.a :
             with self.subTest() :
                 self.assertEqual(f((2, 3, 4), (2, 3, 4)), 0)
 
-    def test_1 (self) :
+    def test_2 (self) :
         for f in self.a :
             with self.subTest() :
                 self.assertEqual(f((2, 3, 4), (3, 2, 5)), 1)
 
-    def test_2 (self) :
+    def test_3 (self) :
         for f in self.a :
             with self.subTest() :
                 self.assertEqual(f((2, 3, 4), (4, 1, 6)), 2)
 
-    def test_3 (self) :
+    def test_4 (self) :
         for f in self.a :
             with self.subTest() :
                 self.assertEqual(f((1, 2, 3, 4, 5), (2, 5, 3, 1, 4)), 2)
 
-    def test_4 (self) :
+    def test_5 (self) :
         for f in self.a :
             with self.subTest() :
                 print()
