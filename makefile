@@ -102,6 +102,8 @@ sync:
     --include "Iteration.py"                 \
     --include "Lambdas.py"                   \
     --include "Comprehensions.py"            \
+    --include "Yield.py"                     \
+    --include "Iterables.py"                 \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete              \
@@ -126,6 +128,8 @@ sync:
     --include "Reduce.py"                    \
     --include "ReduceT.py"                   \
     --include "RMSET.py"                     \
+    --include "MapT.py"                      \
+    --include "RangeIteratorT.py"            \
     --exclude "*"                            \
     ../../exercises/python/ exercises
 	@rsync -r -t -u -v --delete              \
