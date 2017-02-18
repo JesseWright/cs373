@@ -93,10 +93,7 @@ check:
 
 clean:
 	rm -f  .coverage
-	rm -f  .pylintrc
 	rm -f  *.pyc
-	rm -f  Collatz.html
-	rm -f  Collatz.log
 	rm -f  RunCollatz.tmp
 	rm -f  TestCollatz.tmp
 	rm -rf __pycache__
@@ -108,6 +105,12 @@ format:
 	$(AUTOPEP8) -i Collatz.py
 	$(AUTOPEP8) -i RunCollatz.py
 	$(AUTOPEP8) -i TestCollatz.py
+
+scrub:
+	make clean
+	rm -f .pylintrc
+	rm -f Collatz.html
+	rm -f Collatz.log
 
 status:
 	make clean

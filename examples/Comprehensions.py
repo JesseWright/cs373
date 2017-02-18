@@ -93,6 +93,7 @@ assert hasattr(y, "__iter__")
 z = map(lambda v : v * 5, y)
 assert x       == [ 2,  3,  4,  5,  6]
 assert list(z) == [    15,     25]
+assert list(y) == []
 assert list(z) == []
 
 x = [2, 3, 4]
