@@ -127,9 +127,10 @@ sync:
     --include "FactorialT.py"                \
     --include "Reduce.py"                    \
     --include "ReduceT.py"                   \
+    --include "RMSE.py"                     \
     --include "RMSET.py"                     \
-    --include "MapT.py"                      \
     --include "RangeIteratorT.py"            \
+    --include "MapT.py"                      \
     --exclude "*"                            \
     ../../exercises/python/ exercises
 	@rsync -r -t -u -v --delete              \
