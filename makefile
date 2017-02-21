@@ -127,8 +127,9 @@ sync:
     --include "FactorialT.py"                \
     --include "Reduce.py"                    \
     --include "ReduceT.py"                   \
-    --include "RMSE.py"                     \
+    --include "RMSE.py"                      \
     --include "RMSET.py"                     \
+    --include "RangeIterator.py"             \
     --include "RangeIteratorT.py"            \
     --include "MapT.py"                      \
     --exclude "*"                            \
