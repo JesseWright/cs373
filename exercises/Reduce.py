@@ -15,6 +15,12 @@ def reduce_for_range (bf, a, v) :
         v = bf(v, w)
     return v
 
+def reduce_for_enumerate (bf, a, v) :
+    for i, _ in enumerate(a) :
+        w = a[i]
+        v = bf(v, w)
+    return v
+
 def reduce_for (bf, a, v) :
     for w in a :
         v = bf(v, w)

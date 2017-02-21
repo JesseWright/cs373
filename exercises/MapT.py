@@ -14,17 +14,19 @@
 from timeit   import timeit
 from unittest import main, TestCase
 
-from Map import    \
-    Map_Iterator,  \
-    map_range_for, \
-    map_for,       \
+from Map import        \
+    Map_Iterator,      \
+    map_for_range,     \
+    map_for_enumerate, \
+    map_for,           \
     map_generator
 
 class MyUnitTests (TestCase) :
     def setUp (self) :
         self.a = [
             Map_Iterator,
-            map_range_for,
+            map_for_range,
+            map_for_enumerate,
             map_for,
             map_generator,
             map]
@@ -32,27 +34,27 @@ class MyUnitTests (TestCase) :
     def test_1 (self) :
         for f in self.a :
             with self.subTest() :
-                x = f(lambda x : x ** 2, [])
+                x = f(lambda v : v ** 2, [])
                 self.assertEqual(list(x), [])
 
     def test_2 (self) :
         for f in self.a :
             with self.subTest() :
-                x = f(lambda x : x ** 2, [2])
+                x = f(lambda v : v ** 2, [2])
                 self.assertEqual(list(x), [4])
                 self.assertEqual(list(x), [])
 
     def test_3 (self) :
         for f in self.a :
             with self.subTest() :
-                x = f(lambda x : x ** 3, [2, 3])
+                x = f(lambda v : v ** 3, [2, 3])
                 self.assertEqual(list(x), [8, 27])
                 self.assertEqual(list(x), [])
 
     def test_4 (self) :
         for f in self.a :
             with self.subTest() :
-                x = f(lambda x : x ** 2, [2, 3, 4])
+                x = f(lambda v : v ** 2, [2, 3, 4])
                 self.assertEqual(list(x), [4, 9, 16])
                 self.assertEqual(list(x), [])
 
@@ -63,12 +65,12 @@ class MyUnitTests (TestCase) :
                 print(f.__name__)
                 if f.__name__ == "map" :
                     t = timeit(
-                        "list(" + f.__name__ + "(lambda x : x ** 2, 10000 * [5]))",
+                        "list(" + f.__name__ + "(lambda v : v ** 2, 10000 * [5]))",
                         "",
                         number = 100)
                 else :
                     t = timeit(
-                        "list(" + f.__name__ + "(lambda x : x ** 2, 10000 * [5]))",
+                        "list(" + f.__name__ + "(lambda v : v ** 2, 10000 * [5]))",
                         "from __main__ import " + f.__name__,
                         number = 100)
                 print("{:.2f} milliseconds".format(t * 1000))

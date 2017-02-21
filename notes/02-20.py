@@ -28,10 +28,10 @@ class RangeIterator :
         self.e = e
 
     def __next__ (self) :
-        if self.cur == self.end :
+        if self.b == self.end :
             raise StopIteration
-        v = self.cur
-        self.cur += 1
+        v = self.b
+        self.b += 1
         return v
 
     def __iter__ (self):

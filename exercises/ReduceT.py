@@ -15,15 +15,17 @@ from functools import reduce
 from operator  import add, sub
 from unittest  import main, TestCase
 
-from Reduce import    \
-    reduce_for_range, \
-    reduce_for,       \
+from Reduce import        \
+    reduce_for_range,     \
+    reduce_for_enumerate, \
+    reduce_for,           \
     reduce_while
 
 class MyUnitTests (TestCase) :
     def setUp (self) :
         self.a = [
             reduce_for_range,
+            reduce_for_enumerate,
             reduce_for,
             reduce_while,
             reduce]

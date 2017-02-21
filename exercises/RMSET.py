@@ -13,7 +13,8 @@ from timeit   import timeit
 from unittest import main, TestCase
 
 from RMSE import            \
-    rmse_range_for,         \
+    rmse_for_range,         \
+    rmse_for_enumerate,     \
     rmse_iterator,          \
     rmse_map_sum,           \
     rmse_zip_for,           \
@@ -25,7 +26,8 @@ from RMSE import            \
 class MyUnitTests (TestCase) :
     def setUp (self) :
         self.a = [
-            rmse_range_for,
+            rmse_for_range,
+            rmse_for_enumerate,
             rmse_iterator,
             rmse_map_sum,
             rmse_zip_for,

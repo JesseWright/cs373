@@ -19,12 +19,21 @@
 from math  import sqrt
 from numpy import mean, sqrt, square, subtract
 
-def rmse_range_for (a, p) :
+def rmse_for_range (a, p) :
     assert len(a) == len(p)
     v = 0
     if not a :
         return v
     for i in range(len(a)) :
+        v += (a[i] - p[i]) ** 2
+    return sqrt(v / len(a))
+
+def rmse_for_enumerate (a, p) :
+    assert len(a) == len(p)
+    v = 0
+    if not a :
+        return v
+    for i, _ in enumerate(a) :
         v += (a[i] - p[i]) ** 2
     return sqrt(v / len(a))
 
