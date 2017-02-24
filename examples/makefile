@@ -10,7 +10,14 @@ FILES :=              \
     Cache             \
     Iteration         \
     Lambdas           \
-    Comprehensions
+    Comprehensions    \
+    Yield             \
+    Iterables         \
+    FunctionKeywords  \
+    FunctionDefaults  \
+    FunctionUnpacking \
+    FunctionTuple     \
+    FunctionDict
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3.5
