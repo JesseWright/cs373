@@ -136,7 +136,9 @@ sync:
     --include "RMSET.py"                     \
     --include "RangeIterator.py"             \
     --include "RangeIteratorT.py"            \
+    --include "Map.py"                       \
     --include "MapT.py"                      \
+    --include "Range.py"                     \
     --include "RangeT.py"                    \
     --exclude "*"                            \
     ../../exercises/python/ exercises
