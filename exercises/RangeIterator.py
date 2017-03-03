@@ -24,7 +24,7 @@ class Range_Iterator () :
         self.b += 1
         return v
 
-def range_iterator_while (b, e) :
+def range_iterator_yield (b, e) :
     while b != e :
         yield b
         b += 1

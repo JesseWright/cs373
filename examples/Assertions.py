@@ -11,7 +11,7 @@
 
 # https://docs.python.org/3.4/reference/simple_stmts.html#grammar-token-assert_stmt
 
-def cycle_length (n) :
+def cycle_length (n: int) -> int :
     assert n > 0
     c = 0
     while n > 1 :

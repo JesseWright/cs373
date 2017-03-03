@@ -12,13 +12,13 @@ from unittest import main, TestCase
 
 from RangeIterator import \
     Range_Iterator,       \
-    range_iterator_while
+    range_iterator_yield
 
 class MyUnitTests (TestCase) :
     def setUp (self) :
         self.a = [
             Range_Iterator,
-            range_iterator_while]
+            range_iterator_yield]
 
     def test_1 (self) :
         for f in self.a :

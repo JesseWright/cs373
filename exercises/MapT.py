@@ -34,13 +34,13 @@ class MyUnitTests (TestCase) :
     def test_1 (self) :
         for f in self.a :
             with self.subTest() :
-                x = f(lambda v : v ** 2, [])
+                x = f(None, ())
                 self.assertEqual(list(x), [])
 
     def test_2 (self) :
         for f in self.a :
             with self.subTest() :
-                x = f(lambda v : v ** 2, [2])
+                x = f(lambda v : v ** 2, (2,))
                 self.assertEqual(list(x), [4])
                 self.assertEqual(list(x), [])
 
@@ -54,7 +54,7 @@ class MyUnitTests (TestCase) :
     def test_4 (self) :
         for f in self.a :
             with self.subTest() :
-                x = f(lambda v : v ** 2, [2, 3, 4])
+                x = f(lambda v : v ** 2, (2, 3, 4))
                 self.assertEqual(list(x), [4, 9, 16])
                 self.assertEqual(list(x), [])
 
