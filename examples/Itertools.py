@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 
-#pylint: disable = too-many-statements
+# pylint: disable = bad-whitespace
+# pylint: disable = invalid-name
+# pylint: disable = missing-docstring
 
 # ------------
 # Itertools.py
 # ------------
 
-from itertools import count, islice, slice, tee, _tee
+from itertools import count, islice, tee, _tee
 
 print("Itertools.py")
 
