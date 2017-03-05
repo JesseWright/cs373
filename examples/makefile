@@ -17,7 +17,9 @@ FILES :=              \
     FunctionDefaults  \
     FunctionUnpacking \
     FunctionTuple     \
-    FunctionDict
+    FunctionDict      \
+    Itertools         \
+    Functions
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3.5
