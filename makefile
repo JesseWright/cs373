@@ -142,6 +142,7 @@ sync:
     --include "MapT.py"                      \
     --include "Range.py"                     \
     --include "RangeT.py"                    \
+    --include "Decorators.py"                \
     --include "DecoratorsT.py"               \
     --exclude "*"                            \
     ../../exercises/python/ exercises

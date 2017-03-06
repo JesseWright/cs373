@@ -10,7 +10,8 @@ FILES :=            \
     FactorialT      \
     ReduceT         \
     RMSET           \
-    RangeIteratorT
+    RangeIteratorT  \
+    DecoratorsT
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3.5
