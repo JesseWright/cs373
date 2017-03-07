@@ -109,8 +109,7 @@ sync:
     --include "FunctionUnpacking.py"         \
     --include "FunctionTuple.py"             \
     --include "FunctionDict.py"              \
-    --include "Itertools.py"                 \
-    --include "Functions.py"                 \
+    --include "Callables.py"                 \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete              \
@@ -144,6 +143,7 @@ sync:
     --include "RangeT.py"                    \
     --include "Decorators.py"                \
     --include "DecoratorsT.py"               \
+    --include "Decorators2T.py"              \
     --exclude "*"                            \
     ../../exercises/python/ exercises
 	@rsync -r -t -u -v --delete              \
