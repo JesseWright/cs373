@@ -2,6 +2,16 @@
 # Wed,  8 Mar
 # -----------
 
+"""
+In the Java library, class Stack EXTENDS class Vector.
+
+That was a mistake, since clients of Stack can invoke any Vector method on a Stack.
+
+The correct design would have been for Stack to CONTAIN Vector.
+
+That design pattern is called the Adapter Pattern.
+"""
+
 class cache :
     def __init__ (self, f) :
         self.f = f

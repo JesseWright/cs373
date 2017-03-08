@@ -143,6 +143,7 @@ sync:
     --include "RangeT.py"                    \
     --include "Decorators.py"                \
     --include "DecoratorsT.py"               \
+    --include "Decorators2.py"               \
     --include "Decorators2T.py"              \
     --exclude "*"                            \
     ../../exercises/python/ exercises

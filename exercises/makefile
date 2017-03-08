@@ -11,7 +11,8 @@ FILES :=            \
     ReduceT         \
     RMSET           \
     RangeIteratorT  \
-    DecoratorsT
+    DecoratorsT     \
+    Decorators2T
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3.5
