@@ -48,18 +48,18 @@ assert j == 3
 
 i = 4
 j = 2
-k = i / j                   # true division
+f = i / j                   # true division
 assert i == 4
 assert j == 2
-assert isinstance(k, float)
-assert str(k) == "2.0"
+assert isinstance(f, float)
+assert str(f) == "2.0"
 
-i =  4
+f =  4
 j =  2
-i /= j
-assert isinstance(i, float)
-assert str(i ) == "2.0"
-assert j       == 2
+f /= j
+assert isinstance(f, float)
+assert str(f) == "2.0"
+assert j      == 2
 
 i = 5
 j = 2

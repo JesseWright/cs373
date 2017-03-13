@@ -86,17 +86,17 @@ class MyUnitTests (TestCase) :
 
     def test_1 (self) :
         for f in self.a :
-            with self.subTest() :
+            with self.subTest(msg=f.__name__) :
                 self.assertEqual(f( 1), 1)
 
     def test_2 (self) :
         for f in self.a :
-            with self.subTest() :
+            with self.subTest(msg=f.__name__) :
                 self.assertEqual(f( 5), 6)
 
     def test_3 (self) :
         for f in self.a :
-            with self.subTest() :
+            with self.subTest(msg=f.__name__) :
                 self.assertEqual(f(10), 7)
 
     def test_4 (self) :

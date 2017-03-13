@@ -32,22 +32,22 @@ class MyUnitTests (TestCase) :
 
     def test_1 (self) :
         for f in self.a :
-            with self.subTest(msg=f.__name__)() :
+            with self.subTest(msg=f.__name__) :
                 self.assertEqual(f(None, [],       2),  2)
 
     def test_2 (self) :
         for f in self.a :
-            with self.subTest(msg=f.__name__)() :
+            with self.subTest(msg=f.__name__) :
                 self.assertEqual(f(add, [2],       1),  3)
 
     def test_3 (self) :
         for f in self.a :
-            with self.subTest(msg=f.__name__)() :
+            with self.subTest(msg=f.__name__) :
                 self.assertEqual(f(add, [2, 3, 4], 1), 10)
 
     def test_4 (self) :
         for f in self.a :
-            with self.subTest(msg=f.__name__)() :
+            with self.subTest(msg=f.__name__) :
                 self.assertEqual(f(sub, [2, 3, 4], 1), -8)
 
 if __name__ == "__main__" :

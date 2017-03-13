@@ -33,34 +33,34 @@ class MyUnitTests (TestCase) :
 
     def test_1 (self) :
         for f in self.a :
-            with self.subTest(msg=f.__name__)() :
+            with self.subTest(msg=f.__name__) :
                 x = f(None, ())
                 self.assertEqual(list(x), [])
 
     def test_2 (self) :
         for f in self.a :
-            with self.subTest(msg=f.__name__)() :
+            with self.subTest(msg=f.__name__) :
                 x = f(lambda v : v ** 2, (2,))
                 self.assertEqual(list(x), [4])
                 self.assertEqual(list(x), [])
 
     def test_3 (self) :
         for f in self.a :
-            with self.subTest(msg=f.__name__)() :
+            with self.subTest(msg=f.__name__) :
                 x = f(lambda v : v ** 3, [2, 3])
                 self.assertEqual(list(x), [8, 27])
                 self.assertEqual(list(x), [])
 
     def test_4 (self) :
         for f in self.a :
-            with self.subTest(msg=f.__name__)() :
+            with self.subTest(msg=f.__name__) :
                 x = f(lambda v : v ** 2, (2, 3, 4))
                 self.assertEqual(list(x), [4, 9, 16])
                 self.assertEqual(list(x), [])
 
     def test_5 (self) :
         for f in self.a :
-            with self.subTest(msg=f.__name__)() :
+            with self.subTest(msg=f.__name__) :
                 print()
                 print(f.__name__)
                 if f.__name__ == "map" :
