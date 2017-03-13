@@ -23,6 +23,7 @@ FILES :=              \
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3.5
     PIP      := pip3.5
+    MYPY     := mypy
     PYLINT   := pylint
     COVERAGE := coverage-3.5
     PYDOC    := pydoc3.5
@@ -30,6 +31,7 @@ ifeq ($(shell uname), Darwin)          # Apple
 else ifeq ($(CI), true)                # Travis CI
     PYTHON   := python3.5
     PIP      := pip3.5
+    MYPY     := mypy
     PYLINT   := pylint
     COVERAGE := coverage-3.5
     PYDOC    := pydoc3.5
@@ -37,6 +39,7 @@ else ifeq ($(CI), true)                # Travis CI
 else ifeq ($(shell uname -p), unknown) # Docker
     PYTHON   := python3.5
     PIP      := pip3.5
+    MYPY     := mypy
     PYLINT   := pylint
     COVERAGE := coverage-3.5
     PYDOC    := pydoc3.5
@@ -44,6 +47,7 @@ else ifeq ($(shell uname -p), unknown) # Docker
 else                                   # UTCS
     PYTHON   := python3
     PIP      := pip3
+    MYPY     := mypy
     PYLINT   := pylint3
     COVERAGE := coverage-3.5
     PYDOC    := pydoc3.5
@@ -54,6 +58,7 @@ endif
 	$(PYLINT) --disable=locally-disabled --reports=no --generate-rcfile > $@
 
 %.pyx: %.py .pylintrc
+	-$(MYPY) $<
 	-$(PYLINT) $<
 	$(PYTHON) $<
 

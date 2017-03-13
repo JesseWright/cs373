@@ -10,7 +10,7 @@
 
 from math import sqrt
 
-def is_prime (n) :
+def is_prime (n: int) -> int :
     assert n > 0
     if n == 2 :
         return True

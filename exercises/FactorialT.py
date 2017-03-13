@@ -34,37 +34,37 @@ class MyUnitTests (TestCase) :
 
     def test_0 (self) :
         for f in self.a :
-            with self.subTest() :
+            with self.subTest(msg=f.__name__) :
                 self.assertEqual(f(0), 1)
 
     def test_1 (self) :
         for f in self.a :
-            with self.subTest() :
+            with self.subTest(msg=f.__name__) :
                 self.assertEqual(f(1), 1)
 
     def test_2 (self) :
         for f in self.a :
-            with self.subTest() :
+            with self.subTest(msg=f.__name__) :
                 self.assertEqual(f(2), 2)
 
     def test_3 (self) :
         for f in self.a :
-            with self.subTest() :
+            with self.subTest(msg=f.__name__) :
                 self.assertEqual(f(3), 6)
 
     def test_4 (self) :
         for f in self.a :
-            with self.subTest() :
+            with self.subTest(msg=f.__name__) :
                 self.assertEqual(f(4), 24)
 
     def test_5 (self) :
         for f in self.a :
-            with self.subTest() :
+            with self.subTest(msg=f.__name__) :
                 self.assertEqual(f(5), 120)
 
     def test_6 (self) :
         for f in self.a :
-            with self.subTest() :
+            with self.subTest(msg=f.__name__) :
                 print()
                 print(f.__name__)
                 t = timeit(

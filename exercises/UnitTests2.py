@@ -8,7 +8,7 @@
 # UnitTests2.py
 # -------------
 
-def cycle_length (n) :
+def cycle_length (n: int) -> int :
     assert n > 0
     c = 1
     while n > 1 :
