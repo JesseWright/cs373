@@ -3,7 +3,6 @@
 # pylint: disable = bad-whitespace
 # pylint: disable = invalid-name
 # pylint: disable = missing-docstring
-# pylint: disable = redefined-variable-type
 
 # -------
 # Copy.py
@@ -13,49 +12,49 @@ from copy import copy, deepcopy
 
 print("Copy.py")
 
-x = [2, 3, 4]
+a = [2, 3, 4]
 
-assert x[1]   == 3
-assert x[-1]  == 4
-assert x[1:2] == [3]
-assert x[1:3] == [3, 4]
-assert x[0:3] == [2, 3, 4]
-assert x[:]   == [2, 3, 4]
+assert a[1]   == 3
+assert a[-1]  == 4
+assert a[1:2] == [3]
+assert a[1:3] == [3, 4]
+assert a[0:3] == [2, 3, 4]
+assert a[:]   == [2, 3, 4]
 
-y = [1, x, 5]
+b = [1, a, 5]
 
-z = y[:]
-assert y    is not z
-assert y    ==     z
-assert y[1] is     z[1]
+c = b[:]
+assert b    is not c
+assert b    ==     c
+assert b[1] is     c[1]
 
-z = copy(y)
-assert y    is not z
-assert y    ==     z
-assert y[1] is     z[1]
+c = copy(b)
+assert b    is not c
+assert b    ==     c
+assert b[1] is     c[1]
 
-z = deepcopy(y)
-assert y    is not z
-assert y    ==     z
-assert y[1] is not z[1]
-assert y[1] ==     z[1]
+c = deepcopy(b)
+assert b    is not c
+assert b    ==     c
+assert b[1] is not c[1]
+assert b[1] ==     c[1]
 
-x = (2, 3, 4)
+u = (2, 3, 4)
 
-assert x[1:2] == (3,)
-assert x[1:3] == (3, 4)
-assert x[0:3] == (2, 3, 4)
-assert x[:]   == (2, 3, 4)
+assert u[1:2] == (3,)
+assert u[1:3] == (3, 4)
+assert u[0:3] == (2, 3, 4)
+assert u[:]   == (2, 3, 4)
 
-y = (1, x, 5)
+v = (1, u, 5)
 
-z = y[:]
-assert y is z
+w = v[:]
+assert v is w
 
-z = copy(y)
-assert y is z
+w = copy(v)
+assert v is w
 
-z = deepcopy(y)
-assert y is z
+w = deepcopy(v)
+assert v is w
 
 print("Done.")

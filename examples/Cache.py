@@ -3,50 +3,52 @@
 # pylint: disable = bad-whitespace
 # pylint: disable = invalid-name
 # pylint: disable = missing-docstring
-# pylint: disable = redefined-variable-type
+# pylint: disable = unused-import
 
 # --------
 # Cache.py
 # --------
 
+from typing import Dict, FrozenSet, List, Set, Tuple
+
 print("Cache.py")
 
-x = 2
-y = 2 + 0
-assert x is y
+i = 2
+j = 2 + 0
+assert i is j
 
-x = 257
-y = 257
-assert x is y
+i = 257
+j = 257
+assert i is j
 
-x = 257            # cache: [-5, 256]
-y = 257 + 0
-assert x is not y
-assert x ==     y
-x -= 1
-assert x is not y
-assert x !=     y
-y -= 1
-assert x is y
+i = 257            # cache: [-5, 256]
+j = 257 + 0
+assert i is not j
+assert i ==     j
+i -= 1
+assert i is not j
+assert i !=     j
+j -= 1
+assert i is j
 
-x = -6             # cache: [-5, 256]
-y = -6 + 0
-assert x is not y
-assert x ==     y
-x += 1
-assert x is not y
-assert x !=     y
-y += 1
-assert x is y
+i = -6             # cache: [-5, 256]
+j = -6 + 0
+assert i is not j
+assert i ==     j
+i += 1
+assert i is not j
+assert i !=     j
+j += 1
+assert i is j
 
-x = 2.34
-y = 2.34
-assert x is y
+f = 2.34
+g = 2.34
+assert f is g
 
-x = 2.34
-y = 2.34 + 0
-assert x is not y
-assert x ==     y
+f = 2.34
+g = 2.34 + 0
+assert f is not g
+assert f ==     g
 
 s = "abc"
 t = "abc"
@@ -57,33 +59,33 @@ t = "ab" + "c"
 assert s is t
 
 s = "abc"
-u = "ab"
-v = "c"
-t = u + v
+p = "ab"
+q = "c"
+t = p + q
 assert s is not t
 assert s ==     t
 
-a = []
-b = []
+a = []            # type: List
+b = []            # type: List
 assert a is not b
 assert a ==     b
 
-a = ()
-b = ()
-assert a is b
+u = ()        # type: Tuple
+v = ()        # type: Tuple
+assert u is v
 
-a = set()
-b = set()
-assert a is not b
-assert a ==     b
+x = set()         # type: Set
+y = set()         # type: Set
+assert x is not y
+assert x ==     y
 
-a = frozenset()
-b = frozenset()
-assert a is b
+w = frozenset() # type: FrozenSet
+z = frozenset() # type: FrozenSet
+assert w is z
 
-a = {}
-b = {}
-assert a is not b
-assert a ==     b
+d = {}            # type: Dict
+e = {}            # type: Dict
+assert d is not e
+assert d ==     e
 
 print("Done.")
