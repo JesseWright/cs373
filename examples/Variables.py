@@ -9,8 +9,9 @@
 # Variables.py
 # ------------
 
-from copy   import copy
 from typing import Tuple
+
+from copy import copy
 
 print("Variables.py")
 

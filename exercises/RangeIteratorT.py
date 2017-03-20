@@ -24,14 +24,14 @@ class MyUnitTests (TestCase) :
         for f in self.a :
             with self.subTest(msg=f.__name__) :
                 p = f(2, 2)
-                self.assertIs(iter(p), p)
+                self.assertIs(p, iter(p))
                 self.assertRaises(StopIteration, next, p)
 
     def test_2 (self) :
         for f in self.a :
             with self.subTest(msg=f.__name__) :
                 p = f(2, 3)
-                self.assertIs(iter(p), p)
+                self.assertIs(p, iter(p))
                 self.assertEqual(next(p), 2)
                 self.assertRaises(StopIteration, next, p)
 
@@ -39,7 +39,7 @@ class MyUnitTests (TestCase) :
         for f in self.a :
             with self.subTest(msg=f.__name__) :
                 p = f(2, 4)
-                self.assertIs(iter(p), p)
+                self.assertIs(p, iter(p))
                 self.assertEqual(next(p), 2)
                 self.assertEqual(next(p), 3)
                 self.assertRaises(StopIteration, next, p)

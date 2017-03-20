@@ -26,8 +26,8 @@ class MyUnitTests (TestCase) :
             with self.subTest(msg=f.__name__) :
                 x = f(2, 2)
                 p = iter(x)
-                self.assertIsNot(p, x)
-                self.assertIs(iter(p), p)
+                self.assertIsNot(x, p)
+                self.assertIs(p, iter(p))
                 self.assertRaises(StopIteration, next, p)
 
     def test_2 (self) :
@@ -35,8 +35,8 @@ class MyUnitTests (TestCase) :
             with self.subTest(msg=f.__name__) :
                 x = f(2, 3)
                 p = iter(x)
-                self.assertIsNot(p, x)
-                self.assertIs(iter(p), p)
+                self.assertIsNot(x, p)
+                self.assertIs(p, iter(p))
                 self.assertEqual(next(p), 2)
                 self.assertRaises(StopIteration, next, p)
 
@@ -45,8 +45,8 @@ class MyUnitTests (TestCase) :
             with self.subTest(msg=f.__name__) :
                 x = f(2, 4)
                 p = iter(x)
-                self.assertIsNot(p, x)
-                self.assertIs(iter(p), p)
+                self.assertIsNot(x, p)
+                self.assertIs(p, iter(p))
                 self.assertEqual(next(p), 2)
                 self.assertEqual(next(p), 3)
                 self.assertRaises(StopIteration, next, p)

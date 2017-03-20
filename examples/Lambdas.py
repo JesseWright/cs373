@@ -8,26 +8,22 @@
 # Lambdas.py
 # ----------
 
-from operator import add
+from typing import Callable
 
 print("Lambdas.py")
 
-def f (bf, x, y, z) :
-    return bf(x, y) * bf(y, z)
+def f () -> Callable[[int], int] :
+    return lambda n : n ** 2
 
-def g (uf, x, y, z) :
-    return uf(x) * uf(y) * uf(z)
+def g (p: int) -> Callable[[int], int] :
+    return lambda n : n ** p
 
-def h (x) :
-    return lambda y : x + y
+m = map(f(), [2, 3, 4])
+assert list(m) == [4, 9, 16]
+assert list(m) == []
 
-def my_add (x, y) :
-    return x + y
-
-assert f(my_add,              2, 3, 4) == 35 # (2+3) * (3+4)
-assert f(   add,              2, 3, 4) == 35 # (2+3) * (3+4)
-assert f(lambda x, y : x + y, 2, 3, 4) == 35 # (2+3) * (3+4)
-
-assert g(h(2), 3, 4, 5) == 210 # (2+3) * (2+4) * (2+5)
+m = map(g(2), [2, 3, 4])
+assert list(m) == [4, 9, 16]
+assert list(m) == []
 
 print("Done.")

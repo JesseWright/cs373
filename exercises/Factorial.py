@@ -15,7 +15,7 @@ from operator  import mul
 
 # recursive procedure
 # linear recursive process
-def factorial_recursion (n) :
+def factorial_recursion (n: int) -> int :
     assert n >= 0
     if n < 2 :
         return 1
@@ -23,7 +23,7 @@ def factorial_recursion (n) :
 
 # recursive procedure
 # linear iterative process
-def factorial_tail_recursion (n) :
+def factorial_tail_recursion (n: int) -> int :
     assert n >= 0
     def f (n, v) :
         assert n >= 0
@@ -35,7 +35,7 @@ def factorial_tail_recursion (n) :
 
 # iterative procedure
 # linear iterative process
-def factorial_while (n) :
+def factorial_while (n: int) -> int :
     assert n >= 0
     v = 1
     while n > 1 :
@@ -45,7 +45,7 @@ def factorial_while (n) :
 
 # iterative procedure
 # linear iterative process
-def factorial_range_for (n) :
+def factorial_range_for (n: int) -> int :
     assert n >= 0
     v = 1
     for i in range(1, n + 1) :
@@ -54,7 +54,7 @@ def factorial_range_for (n) :
 
 # iterative procedure
 # linear iterative process
-def factorial_range_iterator (n) :
+def factorial_range_iterator (n: int) -> int :
     assert n >= 0
     v = 1
     p = iter(range(1, n + 1))
@@ -68,6 +68,6 @@ def factorial_range_iterator (n) :
 
 # iterative procedure
 # linear iterative process
-def factorial_range_reduce (n) :
+def factorial_range_reduce (n: int) -> int :
     assert n >= 0
     return reduce(mul, range(1, n + 1), 1)

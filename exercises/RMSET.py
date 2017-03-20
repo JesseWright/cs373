@@ -17,8 +17,8 @@ from RMSE import            \
     rmse_for_enumerate,     \
     rmse_iterator,          \
     rmse_map_sum,           \
-    rmse_zip_for,           \
     rmse_zip_map_sum,       \
+    rmse_zip_for,           \
     rmse_zip_list_sum,      \
     rmse_zip_generator_sum, \
     rmse_numpy
@@ -73,29 +73,32 @@ if __name__ == "__main__" :
 """ #pragma: no cover
 % python3.5 RMSET.py
 ....
-rmse_range_for
-418.78 milliseconds
+rmse_for_range
+436.35 milliseconds
+
+rmse_for_enumerate
+444.28 milliseconds
 
 rmse_iterator
-520.41 milliseconds
+552.46 milliseconds
 
 rmse_map_sum
-428.75 milliseconds
-
-rmse_zip_for
-401.01 milliseconds
+431.37 milliseconds
 
 rmse_zip_map_sum
-524.03 milliseconds
+479.33 milliseconds
+
+rmse_zip_for
+389.64 milliseconds
 
 rmse_zip_list_sum
-377.73 milliseconds
+347.12 milliseconds
 
 rmse_zip_generator_sum
-383.78 milliseconds
+379.69 milliseconds
 
 rmse_numpy
-134.99 milliseconds
+121.77 milliseconds
 .
 ----------------------------------------------------------------------
 Ran 5 tests in 3.195s

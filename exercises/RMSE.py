@@ -5,7 +5,7 @@
 # pylint: disable = invalid-name
 # pylint: disable = missing-docstring
 # pylint: disable = no-name-in-module
-# pylint: disable = reimported
+# pylint: disable = unused-import
 
 # -------
 # RMSE.py
@@ -16,10 +16,12 @@
 # http://docs.scipy.org/doc/numpy/reference/generated/numpy.square.html
 # http://docs.scipy.org/doc/numpy/reference/generated/numpy.subtract.html
 
-from math  import sqrt
-from numpy import mean, sqrt, square, subtract
+from typing import Sequence, TypeVar
 
-def rmse_for_range (a, p) :
+from math  import sqrt
+from numpy import mean, square, subtract
+
+def rmse_for_range (a: Sequence[int], p: Sequence[int]) :
     assert len(a) == len(p)
     v = 0
     if not a :
@@ -28,7 +30,7 @@ def rmse_for_range (a, p) :
         v += (a[i] - p[i]) ** 2
     return sqrt(v / len(a))
 
-def rmse_for_enumerate (a, p) :
+def rmse_for_enumerate (a: Sequence[int], p: Sequence[int]) :
     assert len(a) == len(p)
     v = 0
     if not a :
@@ -37,7 +39,7 @@ def rmse_for_enumerate (a, p) :
         v += (a[i] - p[i]) ** 2
     return sqrt(v / len(a))
 
-def rmse_iterator (a, p) :
+def rmse_iterator (a: Sequence[int], p: Sequence[int]) :
     assert len(a) == len(p)
     v = 0
     if not a :
@@ -51,7 +53,7 @@ def rmse_iterator (a, p) :
         pass
     return sqrt(v / len(a))
 
-def rmse_map_sum (a, p) :
+def rmse_map_sum (a: Sequence[int], p: Sequence[int]) :
     assert len(a) == len(p)
     v = 0
     if not a :
@@ -59,7 +61,16 @@ def rmse_map_sum (a, p) :
     v = sum(map(lambda x, y : (x - y) ** 2, a, p))
     return sqrt(v / len(a))
 
-def rmse_zip_for (a, p) :
+def rmse_zip_map_sum (a: Sequence[int], p: Sequence[int]) :
+    assert len(a) == len(p)
+    v = 0
+    if not a :
+        return v
+    z = zip(a, p)
+    v = sum(map(lambda u : (u[0] - u[1]) ** 2, z))
+    return sqrt(v / len(a))
+
+def rmse_zip_for (a: Sequence[int], p: Sequence[int]) :
     assert len(a) == len(p)
     v = 0
     if not a :
@@ -70,16 +81,7 @@ def rmse_zip_for (a, p) :
         v += (x - y) ** 2
     return sqrt(v / len(a))
 
-def rmse_zip_map_sum (a, p) :
-    assert len(a) == len(p)
-    v = 0
-    if not a :
-        return v
-    z = zip(a, p)
-    v = sum(map(lambda u : (u[0] - u[1]) ** 2, z))
-    return sqrt(v / len(a))
-
-def rmse_zip_list_sum (a, p) :
+def rmse_zip_list_sum (a: Sequence[int], p: Sequence[int]) :
     assert len(a) == len(p)
     v = 0
     if not a :
@@ -88,7 +90,7 @@ def rmse_zip_list_sum (a, p) :
     v = sum([(x - y) ** 2 for x, y in z])
     return sqrt(v / len(a))
 
-def rmse_zip_generator_sum (a, p) :
+def rmse_zip_generator_sum (a: Sequence[int], p: Sequence[int]) :
     assert len(a) == len(p)
     v = 0
     if not a :
@@ -97,7 +99,7 @@ def rmse_zip_generator_sum (a, p) :
     v = sum((x - y) ** 2 for x, y in z)
     return sqrt(v / len(a))
 
-def rmse_numpy (a, p) :
+def rmse_numpy (a: Sequence[int], p: Sequence[int]) :
     assert len(a) == len(p)
     v = 0
     if not a :

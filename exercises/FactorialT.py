@@ -80,22 +80,25 @@ if __name__ == "__main__" :
 % FactorialT.py
 ......
 factorial_recursion
-20.35 milliseconds
+144.77 milliseconds
 
 factorial_tail_recursion
-29.85 milliseconds
+149.86 milliseconds
 
 factorial_while
-14.40 milliseconds
+70.56 milliseconds
 
 factorial_range_for
-7.72 milliseconds
+48.67 milliseconds
+
+factorial_range_iterator
+67.27 milliseconds
 
 factorial_range_reduce
-8.89 milliseconds
+11.52 milliseconds
 
 factorial
-0.90 milliseconds
+1.07 milliseconds
 .
 ----------------------------------------------------------------------
 Ran 7 tests in 0.087s

@@ -14,7 +14,8 @@
 # --------
 
 from typing import Dict, FrozenSet, List, Set, Tuple
-from types  import FunctionType
+
+from types import FunctionType
 
 print("Types.py")
 

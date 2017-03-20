@@ -8,7 +8,9 @@
 # Iterables.py
 # ------------
 
-def test_iterator (p) :
+from typing import Iterable, Iterator
+
+def test_iterator (p: Iterator[int]) :
     assert hasattr(p, "__next__")
     assert hasattr(p, "__iter__")
     q = iter(p)                   # q = p.__iter__()
@@ -24,7 +26,7 @@ def test_iterator (p) :
     except StopIteration :
         pass
 
-def test_iterable (x) :
+def test_iterable (x: Iterable[int]) :
     assert not hasattr(x, "__next__")
     assert     hasattr(x, "__iter__")
     p = iter(x)                       # p = x.__iter__()
