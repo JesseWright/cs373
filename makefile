@@ -150,6 +150,7 @@ sync:
     --include "DecoratorsT.py"               \
     --include "Decorators2.py"               \
     --include "Decorators2T.py"              \
+    --include "Select.py"                    \
     --include "SelectT.py"                   \
     --include "ProjectT.py"                  \
     --exclude "*"                            \
