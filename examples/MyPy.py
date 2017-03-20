@@ -11,7 +11,7 @@
 
 # http://mypy-lang.org
 
-from typing import Dict, Iterable, Iterator, List, Sequence, Set, Tuple
+from typing import Callable, Dict, Iterable, Iterator, List, Sequence, Set, Tuple
 
 print("MyPy.py")
 
@@ -93,5 +93,19 @@ def f_iterator (a: Iterator[int]) :
 
 f_iterator((map(lambda v : v**2, (2, 3, 4))))
 # f_iterator([2, 3, 4])                       # mypy error: Argument 1 to "f_iterator" has incompatible type List[int]; expected Iterator[int]
+
+
+
+def f_callable (c: Callable[[int], int]) :
+    assert c
+
+def g (v: int) -> int :
+    return v
+
+def h (v: float) -> float :
+    return v
+
+f_callable(g)
+# f_callable(h) # mypy: error: Argument 1 to "f_callable" has incompatible type Callable[[float], float]; expected Callable[[int], int]
 
 print("Done.")
