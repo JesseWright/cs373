@@ -29,14 +29,14 @@ class MyUnitTests (TestCase) :
 
     def test_1 (self) :
         for f in self.a :
-            with self.subTest() :
+            with self.subTest(msg=f.__name__) :
                 self.assertEqual(
                     list(f(self.r, "D")),
                     [{}, {}, {}])
 
     def test_2 (self) :
         for f in self.a :
-            with self.subTest() :
+            with self.subTest(msg=f.__name__) :
                 self.assertEqual(
                     list(f(self.r, "B")),
                     [{'B': 4},
@@ -45,7 +45,7 @@ class MyUnitTests (TestCase) :
 
     def test_3 (self) :
         for f in self.a :
-            with self.subTest() :
+            with self.subTest(msg=f.__name__) :
                 self.assertEqual(
                     list(f(self.r, "A", "C")),
                     [{'A': 1, 'C': 3},
