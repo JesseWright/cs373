@@ -35,7 +35,7 @@ select(relation, unary predicate) -> relation
 def select (
         r: Iterable[Dict[str, int]],
         f: Callable[Dict[str, int], bool]) \
-        -&gt; Iterator[Dict[str, int]] :
+        -> Iterator[Dict[str, int]] :
 
     for d in r :
         if f(d) :
