@@ -152,7 +152,9 @@ sync:
     --include "Decorators2T.py"              \
     --include "Select.py"                    \
     --include "SelectT.py"                   \
+    --include "Project.py"                   \
     --include "ProjectT.py"                  \
+    --include "CrossJoin.py"                 \
     --include "CrossJoinT.py"                \
     --include "ThetaJoinT.py"                \
     --include "NaturalJoinT.py"              \

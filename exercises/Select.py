@@ -3,7 +3,6 @@
 # pylint: disable = bad-whitespace
 # pylint: disable = invalid-name
 # pylint: disable = missing-docstring
-# pylint: disable = unused-import
 
 # ---------
 # Select.py
@@ -16,7 +15,7 @@ from typing import Callable, Dict, Iterable, Iterator
 def select_yield (
         r: Iterable[Dict[str, int]],
         f: Callable[[Dict[str, int]], bool]) \
-        -> Iterator[Dict[str, int]] :
+        -> Iterator[Dict[str, int]]          :
     for d in r :
         if f(d) :
             yield d
@@ -24,11 +23,11 @@ def select_yield (
 def select_generator (
         r: Iterable[Dict[str, int]],
         f: Callable[[Dict[str, int]], bool]) \
-        -> Iterator[Dict[str, int]] :
+        -> Iterator[Dict[str, int]]          :
     return (d for d in r if f(d))
 
 def select_filter (
         r: Iterable[Dict[str, int]],
         f: Callable[[Dict[str, int]], bool]) \
-        -> Iterator[Dict[str, int]] :
+        -> Iterator[Dict[str, int]]          :
     return filter(f, r)
