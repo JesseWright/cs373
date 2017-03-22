@@ -153,6 +153,9 @@ sync:
     --include "Select.py"                    \
     --include "SelectT.py"                   \
     --include "ProjectT.py"                  \
+    --include "CrossJoinT.py"                \
+    --include "ThetaJoinT.py"                \
+    --include "NaturalJoinT.py"              \
     --exclude "*"                            \
     ../../exercises/python/ exercises
 	@rsync -r -t -u -v --delete              \
