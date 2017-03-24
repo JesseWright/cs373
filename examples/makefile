@@ -18,7 +18,8 @@ FILES :=              \
     FunctionUnpacking \
     FunctionTuple     \
     FunctionDict      \
-    Callables
+    Callables         \
+    MyPy
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3.5

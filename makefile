@@ -156,7 +156,9 @@ sync:
     --include "ProjectT.py"                  \
     --include "CrossJoin.py"                 \
     --include "CrossJoinT.py"                \
+    --include "ThetaJoin.py"                 \
     --include "ThetaJoinT.py"                \
+    --include "NaturalJoin.py"               \
     --include "NaturalJoinT.py"              \
     --exclude "*"                            \
     ../../exercises/python/ exercises

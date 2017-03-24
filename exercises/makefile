@@ -12,7 +12,12 @@ FILES :=            \
     RMSET           \
     RangeIteratorT  \
     DecoratorsT     \
-    Decorators2T
+    Decorators2T    \
+    SelectT         \
+    ProjectT        \
+    CrossJoinT      \
+    ThetaJoinT      \
+    NaturalJoinT
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3.5
