@@ -19,7 +19,8 @@ FILES :=              \
     FunctionTuple     \
     FunctionDict      \
     Callables         \
-    MyPy
+    MyPy              \
+    RegExps
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3.5

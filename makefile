@@ -115,6 +115,7 @@ sync:
     --include "FunctionDict.py"              \
     --include "Callables.py"                 \
     --include "MyPy.py"                      \
+    --include "RegExps.py"                   \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete              \
