@@ -14,6 +14,7 @@ from typing import Callable, Dict, Iterable, Iterator
 
 def theta_join_yield (
         r: Iterable[Dict[str, int]],
+        s: Iterable[Dict[str, int]],
         f: Callable[[Dict[str, int], Dict[str, int]], bool]) \
         -> Iterator[Dict[str, int]]                          :
     for u in r :
@@ -21,5 +22,9 @@ def theta_join_yield (
             if f(u, v) :
                 yield dict(u, **v)
 
-def theta_join_generator (r, s, bp) :
-    return (dict(u, **v) for u in r for v in s if bp(u, v))
+def theta_join_generator (
+        r: Iterable[Dict[str, int]],
+        s: Iterable[Dict[str, int]],
+        f: Callable[[Dict[str, int], Dict[str, int]], bool]) \
+        -> Iterator[Dict[str, int]]                          :
+    return (dict(u, **v) for u in r for v in s if f(u, v))
