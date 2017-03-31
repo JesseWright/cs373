@@ -132,6 +132,16 @@ sync:
     --exclude "*"                            \
     ../../examples/json/ examples
 	@rsync -r -t -u -v --delete              \
+    --include "ShowDatabases.sql"            \
+    --include "ShowEngines.sql"              \
+    --include "Create.sql"                   \
+    --include "Select.sql"                   \
+    --include "Join.sql"                     \
+    --include "Subqueries.sql"               \
+    --include "Aggregation.sql"              \
+    --exclude "*"                            \
+    ../../examples/sql/ examples
+	@rsync -r -t -u -v --delete              \
     --include "UnitTests1.py"                \
     --include "UnitTests1T.py"               \
     --include "UnitTests2.py"                \
