@@ -137,8 +137,13 @@ sync:
     --include "Create.sql"                   \
     --include "Select.sql"                   \
     --include "Join.sql"                     \
+    --include "Joins.sql"                    \
     --include "Subqueries.sql"               \
+    --include "Sets.sql"                     \
     --include "Aggregation.sql"              \
+    --include "Insert.sql"                   \
+    --include "Delete.sql"                   \
+    --include "Update.sql"                   \
     --exclude "*"                            \
     ../../examples/sql/ examples
 	@rsync -r -t -u -v --delete              \
