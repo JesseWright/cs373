@@ -77,9 +77,9 @@ select * from Apply;
 select * from College;
 
 # ------------------------------------------------------------------------
-select "*** #1 ***";
 select "*** ID, name, and GPA of students who applied in CS ***";
 
+select "*** #1 ***";
 select "this is not right, why?";
 
 select sID, sName, GPA
@@ -87,6 +87,7 @@ select sID, sName, GPA
     inner join Apply using (sID)
     where major = 'CS';
 
+select "*** #2 ***";
 select "this is right";
 
 select distinct sID, sName, GPA
@@ -94,6 +95,7 @@ select distinct sID, sName, GPA
     inner join Apply using (sID)
     where major = 'CS';
 
+select "*** #3 ***";
 select "this is also right, using subquery, with in";
 
 select sID, sName, GPA
@@ -104,9 +106,9 @@ select sID, sName, GPA
             where major = 'CS');
 
 # ------------------------------------------------------------------------
-select "*** #2 ***";
 select "*** GPA of students who applied in CS ***";
 
+select "*** #4 ***";
 select "this is not right, why?";
 
 select GPA
@@ -115,6 +117,7 @@ select GPA
     where major = 'CS'
     order by GPA desc;
 
+select "*** #5 ***";
 select "this is still not right, why?";
 
 select distinct GPA
@@ -123,6 +126,7 @@ select distinct GPA
     where major = 'CS'
     order by GPA desc;
 
+select "*** #6 ***";
 select "this is right, using subquery, with in";
 
 select GPA
@@ -134,9 +138,9 @@ select GPA
     order by GPA desc;
 
 # ------------------------------------------------------------------------
-select "*** #3 ***";
 select "*** ID of students who have applied in CS but not in EE ***";
 
+select "*** #7 ***";
 select "this is not right, why?";
 
 select sID
@@ -146,6 +150,7 @@ select sID
         and
         sID in (select sID from Apply where major != 'EE');
 
+select "*** #8 ***";
 select "this is right, using subquery, with in and not in";
 
 select sID
@@ -155,6 +160,7 @@ select sID
         and
         sID not in (select sID from Apply where major = 'EE');
 
+select "*** #9 ***";
 select "this is also right, using subquery, with in";
 
 select distinct sID
@@ -165,9 +171,9 @@ select distinct sID
         sID not in (select sID from Apply where major = 'EE');
 
 # ------------------------------------------------------------------------
-select "*** #4 ***";
 select "*** colleges with another college in the same state ***";
 
+select "*** #10 ***";
 select "using inner join";
 
 select distinct R.cName, R.state
@@ -176,6 +182,7 @@ select distinct R.cName, R.state
     where (R.cName != S.cName) and
           (R.state  = S.state);
 
+select "*** #11 ***";
 select "using subquery, with exists";
 
 select cName, state
@@ -186,6 +193,7 @@ select cName, state
             where (R.cName != S.cName) and
                   (R.state =  S.state));
 
+select "*** #12 ***";
 select "using subquery, with group by and having";
 
 select cName, state
@@ -197,9 +205,9 @@ select cName, state
             having count(State) > 1) as T;
 
 # ------------------------------------------------------------------------
-select "*** #5 ***";
 select "*** colleges with highest enrollment ***";
 
+select "*** #13 ***";
 select "using subquery, with not exists";
 
 select cName, enrollment
@@ -209,6 +217,7 @@ select cName, enrollment
             from College as S
             where R.enrollment < S.enrollment);
 
+select "*** #14 ***";
 select "using subquery, with all";
 
 select cName, enrollment
@@ -218,9 +227,9 @@ select cName, enrollment
             from College);
 
 # ------------------------------------------------------------------------
-select "*** #6 ***";
 select "*** students with highest GPA ***";
 
+select "*** #15 ***";
 select "this is not right, why?";
 
 select sID, sName, GPA
@@ -230,6 +239,7 @@ select sID, sName, GPA
             from Student as S
             where R.GPA < S.GPA);
 
+select "*** #16 ***";
 select "this is right";
 
 select sID, sName, GPA
@@ -242,6 +252,7 @@ select sID, sName, GPA
         and
         (GPA is not null);
 
+select "*** #17 ***";
 select "this is also right, using subquery, with all";
 
 select sID, sName, GPA

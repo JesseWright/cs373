@@ -77,35 +77,47 @@ select * from Apply;
 select * from College;
 
 # ------------------------------------------------------------------------
+# relational algebra select
+
 select "*** #1 ***";
 select *
     from Student
     where (GPA > 3.7);
 
 # ------------------------------------------------------------------------
+# relational algebra select
+
 select "*** #2 ***";
 select *
     from Student
     where (GPA > 3.7) and (sizeHS < 1000);
 
 # ------------------------------------------------------------------------
+# relational algebra select
+
 select "*** #3 ***";
 select *
     from Apply
     where (cName = 'Stanford') and (major = 'CS');
 
 # ------------------------------------------------------------------------
+# relational algebra project
+
 select "*** #4 ***";
 select sID, decision
     from Apply;
 
 # ------------------------------------------------------------------------
+# relational algebra select and project
+
 select "*** #5 ***";
 select sID, sName
     from Student
     where (GPA > 3.7);
 
 # ------------------------------------------------------------------------
+# relational algebra project and sorting
+
 select "*** #6 ***";
 select major, decision
     from Apply

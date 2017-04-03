@@ -23,61 +23,44 @@ insert into S values (4, 8);
 insert into S values (4, 9);
 
 # ------------------------------------------------------------------------
+select "*** #1 ***";
+
 select * from R;
 select * from S;
-
-# select count(*) from R, S;
-# select       *  from R, S;
-
-# select count(*) from R inner join S;
-# select       *  from R inner join S;
 
 select count(*) from R cross join S;
 select       *  from R cross join S;
 
 # ------------------------------------------------------------------------
+select "*** #2 ***";
+
 select * from R;
 select * from S;
-
-# select count(*) from R, S where R.A = S.B;
-# select       *  from R, S where R.A = S.B;
-
-# select count(*) from R cross join S where R.A = S.B;
-# select       *  from R cross join S where R.A = S.B;
-
-# select count(*) from R inner join S where R.A = S.B;
-# select       *  from R inner join S where R.A = S.B;
-
-# select count(*) from R, S on R.A = S.B; # You have an error in your SQL syntax
-# select       *  from R, S on R.A = S.B; # You have an error in your SQL syntax
-
-# select count(*) from R cross join S on R.A = S.B;
-# select       *  from R cross join S on R.A = S.B;
 
 select count(*) from R inner join S on R.A = S.B;
 select       *  from R inner join S on R.A = S.B;
 
 # ------------------------------------------------------------------------
+select "*** #3 ***";
+
 select * from R;
 select * from S;
-
-# select count(*) from R left join S where R.A = S.B; # You have an error in your SQL syntax
-# select       *  from R left join S where R.A = S.B; # You have an error in your SQL syntax
 
 select count(*) from R left join S on R.A = S.B;
 select       *  from R left join S on R.A = S.B;
 
 # ------------------------------------------------------------------------
+select "*** #4 ***";
+
 select * from R;
 select * from S;
-
-# select count(*) from R right join S where R.A = S.B; # You have an error in your SQL syntax
-# select       *  from R right join S where R.A = S.B; # You have an error in your SQL syntax
 
 select count(*) from R right join S on R.A = S.B;
 select       *  from R right join S on R.A = S.B;
 
 # ------------------------------------------------------------------------
+select "*** #5 ***";
+
 select * from R;
 select * from S;
 
@@ -103,6 +86,8 @@ insert into S values (8, 3);
 insert into S values (9, 4);
 
 # ------------------------------------------------------------------------
+select "*** #6 ***";
+
 select * from R;
 select * from S;
 
@@ -110,6 +95,8 @@ select count(*) from R cross join S;
 select       *  from R cross join S;
 
 # ------------------------------------------------------------------------
+select "*** #7 ***";
+
 select * from R;
 select * from S;
 
@@ -117,6 +104,8 @@ select count(*) from R inner join S using (A);
 select       *  from R inner join S using (A);
 
 # ------------------------------------------------------------------------
+select "*** #8 ***";
+
 select * from R;
 select * from S;
 
@@ -124,6 +113,8 @@ select count(*) from R left join S using (A);
 select       *  from R left join S using (A);
 
 # ------------------------------------------------------------------------
+select "*** #9 ***";
+
 select * from R;
 select * from S;
 
@@ -131,6 +122,8 @@ select count(*) from R right join S using (A);
 select       *  from R right join S using (A);
 
 # ------------------------------------------------------------------------
+select "*** #10 ***";
+
 select * from R;
 select * from S;
 
@@ -156,6 +149,8 @@ insert into S values (4, 8);
 insert into S values (4, 9);
 
 # ------------------------------------------------------------------------
+select "*** #11 ***";
+
 select * from R;
 select * from S;
 
@@ -163,6 +158,8 @@ select count(*) from R cross join S;
 select       *  from R cross join S;
 
 # ------------------------------------------------------------------------
+select "*** #12 ***";
+
 select * from R;
 select * from S;
 
@@ -170,6 +167,8 @@ select count(*) from R inner join S using (A);
 select       *  from R inner join S using (A);
 
 # ------------------------------------------------------------------------
+select "*** #13 ***";
+
 select * from R;
 select * from S;
 
@@ -177,6 +176,8 @@ select count(*) from R left join S using (A);
 select       *  from R left join S using (A);
 
 # ------------------------------------------------------------------------
+select "*** #14 ***";
+
 select * from R;
 select * from S;
 
@@ -184,6 +185,8 @@ select count(*) from R right join S using (A);
 select       *  from R right join S using (A);
 
 # ------------------------------------------------------------------------
+select "*** #15 ***";
+
 select * from R;
 select * from S;
 
@@ -211,6 +214,8 @@ insert into S values (2, 5, 8);
 insert into S values (4, 7, 9);
 
 # ------------------------------------------------------------------------
+select "*** #16 ***";
+
 select * from R;
 select * from S;
 
@@ -218,6 +223,8 @@ select count(*) from R cross join S;
 select       *  from R cross join S;
 
 # ------------------------------------------------------------------------
+select "*** #17 ***";
+
 select * from R;
 select * from S;
 
@@ -225,6 +232,8 @@ select count(*) from R inner join S on R.A = S.A;
 select       *  from R inner join S on R.A = S.A;
 
 # ------------------------------------------------------------------------
+select "*** #18 ***";
+
 select * from R;
 select * from S;
 
@@ -232,6 +241,8 @@ select count(*) from R left join S on R.A = S.A;
 select       *  from R left join S on R.A = S.A;
 
 # ------------------------------------------------------------------------
+select "*** #19 ***";
+
 select * from R;
 select * from S;
 
@@ -239,6 +250,8 @@ select count(*) from R right join S on R.A = S.A;
 select       *  from R right join S on R.A = S.A;
 
 # ------------------------------------------------------------------------
+select "*** #20 ***";
+
 select * from R;
 select * from S;
 
@@ -259,30 +272,40 @@ insert into T values (2);
 insert into T values (3);
 
 # ------------------------------------------------------------------------
+select "*** #21 ***";
+
 select * from T;
 
 select count(*) from T as R cross join T as S;
 select       *  from T as R cross join T as S;
 
 # ------------------------------------------------------------------------
+select "*** #22 ***";
+
 select * from T;
 
 select count(*) from T as R inner join T as S using (A);
 select       *  from T as R inner join T as S using (A);
 
 # ------------------------------------------------------------------------
+select "*** #23 ***";
+
 select * from T;
 
 select count(*) from T as R left join T as S using (A);
 select       *  from T as R left join T as S using (A);
 
 # ------------------------------------------------------------------------
+select "*** #24 ***";
+
 select * from T;
 
 select count(*) from T as R right join T as S using (A);
 select       *  from T as R right join T as S using (A);
 
 # ------------------------------------------------------------------------
+select "*** #25 ***";
+
 select * from T;
 
 select count(*) from T as R natural join T as S;

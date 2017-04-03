@@ -77,38 +77,36 @@ select * from Apply;
 select * from College;
 
 # ------------------------------------------------------------------------
-# select *
-#     from Student, Apply
-#     order by Student.sID;
+# relational algebra cross join
 
 select "*** #1 ***";
+
 select *
     from Student cross join Apply
     order by Student.sID;
 
 # ------------------------------------------------------------------------
-# select *
-#     from Student
-#     inner join Apply
-#     where Student.sID = Apply.sID;
-
-# select *
-#     from Student
-#     inner join Apply on Student.sID = Apply.sID;
+# relational algebra cross join
 
 select "*** #2 ***";
+
 select *
     from Student
     inner join Apply using (sID);
 
 # ------------------------------------------------------------------------
+# relational algebra cross join and select
+
 select "*** #3 ***";
+
 select *
     from Student
     inner join Apply using (sID)
     where (sizeHS   > 1000)   and
           (major    = 'CS')   and
           (decision = false);
+
+# relational algebra cross join and select
 
 select sName, GPA
     from Student
@@ -118,7 +116,10 @@ select sName, GPA
           (decision = false);
 
 # ------------------------------------------------------------------------
+# relational algebra cross join and select
+
 select "*** #4 ***";
+
 select *
     from Student
         inner join Apply   using (sID)
@@ -127,6 +128,8 @@ select *
           (major      = 'CS')  and
           (decision   = true)  and
           (enrollment > 20000);
+
+# relational algebra cross join and select
 
 select sName, GPA
     from Student
