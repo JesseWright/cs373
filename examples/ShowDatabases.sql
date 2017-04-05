@@ -1,8 +1,8 @@
-# -----------------
-# ShowDatabases.sql
-# -----------------
+--  -----------------
+--  ShowDatabases.sql
+--  -----------------
 
-# https://www.mysql.com
+--  https://www.mysql.com
 
 show databases;
 exit

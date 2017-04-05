@@ -1,15 +1,15 @@
-# ----------
-# Create.sql
-# ----------
+-- ----------
+-- Create.sql
+-- ----------
 
 use test;
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 drop table if exists Student;
 drop table if exists Apply;
 drop table if exists College;
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 create table Student (
     sID    int,
     sName  text,
@@ -27,13 +27,13 @@ create table College (
     state      char(2),
     enrollment int);
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 show tables;
 show columns from Student;
 show columns from Apply;
 show columns from College;
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 insert into Student values (123, 'Amy',    3.9,  1000);
 insert into Student values (234, 'Bob',    3.6,  1500);
 insert into Student values (320, 'Lori',   null, 2500);
@@ -77,12 +77,12 @@ insert into College values ('Irene',    'TX', 25000);
 insert into College values ('MIT',      'MA', 10000);
 insert into College values ('Stanford', 'CA', 15000);
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 select * from Student;
 select * from Apply;
 select * from College;
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 drop table if exists Student;
 drop table if exists Apply;
 drop table if exists College;

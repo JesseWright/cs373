@@ -1,6 +1,6 @@
-# ---------------
-# ShowEngines.sql
-# ---------------
+--  ---------------
+--  ShowEngines.sql
+--  ---------------
 
 show engines;
 exit

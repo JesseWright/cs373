@@ -1,15 +1,15 @@
-# --------
-# Join.sql
-# --------
+-- --------
+-- Join.sql
+-- --------
 
 use test;
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 drop table if exists Student;
 drop table if exists Apply;
 drop table if exists College;
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 create table Student (
     sID    int,
     sName  text,
@@ -27,7 +27,7 @@ create table College (
     state      char(2),
     enrollment int);
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 insert into Student values (123, 'Amy',    3.9,  1000);
 insert into Student values (234, 'Bob',    3.6,  1500);
 insert into Student values (320, 'Lori',   null, 2500);
@@ -71,12 +71,12 @@ insert into College values ('Irene',    'TX', 25000);
 insert into College values ('MIT',      'MA', 10000);
 insert into College values ('Stanford', 'CA', 15000);
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 select * from Student;
 select * from Apply;
 select * from College;
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 # relational algebra cross join
 
 select "*** #1 ***";
@@ -85,7 +85,7 @@ select *
     from Student cross join Apply
     order by Student.sID;
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 # relational algebra cross join
 
 select "*** #2 ***";
@@ -94,7 +94,7 @@ select *
     from Student
     inner join Apply using (sID);
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 # relational algebra cross join and select
 
 select "*** #3 ***";
@@ -115,7 +115,7 @@ select sName, GPA
           (major    = 'CS')   and
           (decision = false);
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 # relational algebra cross join and select
 
 select "*** #4 ***";
@@ -140,7 +140,7 @@ select sName, GPA
           (decision   = true)  and
           (enrollment > 20000);
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 drop table if exists Student;
 drop table if exists Apply;
 drop table if exists College;

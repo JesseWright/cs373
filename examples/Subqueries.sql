@@ -1,15 +1,15 @@
-# --------------
-# Subqueries.sql
-# --------------
+-- --------------
+-- Subqueries.sql
+-- --------------
 
 use test;
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 drop table if exists Student;
 drop table if exists Apply;
 drop table if exists College;
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 create table Student (
     sID    int,
     sName  text,
@@ -27,7 +27,7 @@ create table College (
     state      char(2),
     enrollment int);
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 insert into Student values (123, 'Amy',    3.9,  1000);
 insert into Student values (234, 'Bob',    3.6,  1500);
 insert into Student values (320, 'Lori',   null, 2500);
@@ -71,12 +71,12 @@ insert into College values ('Irene',    'TX', 25000);
 insert into College values ('MIT',      'MA', 10000);
 insert into College values ('Stanford', 'CA', 15000);
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 select * from Student;
 select * from Apply;
 select * from College;
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 select "*** ID, name, and GPA of students who applied in CS ***";
 
 select "*** #1 ***";
@@ -105,7 +105,7 @@ select sID, sName, GPA
             from Apply
             where major = 'CS');
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 select "*** GPA of students who applied in CS ***";
 
 select "*** #4 ***";
@@ -137,7 +137,7 @@ select GPA
             where major = 'CS')
     order by GPA desc;
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 select "*** ID of students who have applied in CS but not in EE ***";
 
 select "*** #7 ***";
@@ -170,7 +170,7 @@ select distinct sID
         and
         sID not in (select sID from Apply where major = 'EE');
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 select "*** colleges with another college in the same state ***";
 
 select "*** #10 ***";
@@ -204,7 +204,7 @@ select cName, state
             group by State
             having count(State) > 1) as T;
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 select "*** colleges with highest enrollment ***";
 
 select "*** #13 ***";
@@ -226,7 +226,7 @@ select cName, enrollment
         (select enrollment
             from College);
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 select "*** students with highest GPA ***";
 
 select "*** #15 ***";
@@ -262,7 +262,7 @@ select sID, sName, GPA
             from Student
             where GPA is not null);
 
-# ------------------------------------------------------------------------
+-- -----------------------------------------------------------------------
 drop table if exists Student;
 drop table if exists Apply;
 drop table if exists College;
