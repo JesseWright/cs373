@@ -1,4 +1,4 @@
--- ---------------
+    -- ---------------
 -- Aggregation.sql
 -- ---------------
 
@@ -146,10 +146,6 @@ select "*** number of colleges with enrollment > 15000 ***";
 
 select *
     from College
-    order by enrollment desc;
-
-select *
-    from College
     where enrollment > 15000
     order by enrollment desc;
 
@@ -163,11 +159,11 @@ select "*** number of students who applied to Cornell ***";
 
 select "this is not right, because of duplicates";
 
-select *
+select sID
     from Apply
     where cName = "Cornell";
 
-select count(*)
+select count(sID)
     from Apply
     where cName = "Cornell";
 
