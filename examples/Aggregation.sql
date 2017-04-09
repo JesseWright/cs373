@@ -177,6 +177,22 @@ select count(distinct sID)
     from Apply
     where cName = "Cornell";
 
+select "this is also right";
+
+select sID
+    from Student
+    where sID in
+        (select sID
+            from Apply
+            where cName = "Cornell");
+
+select count(sID)
+    from Student
+    where sID in
+        (select sID
+            from Apply
+            where cName = "Cornell");
+
 -- -----------------------------------------------------------------------
 select "*** #5 ***";
 select "*** students, such that ***";
