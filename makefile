@@ -189,6 +189,15 @@ sync:
     --exclude "*"                            \
     ../../exercises/python/ exercises
 	@rsync -r -t -u -v --delete              \
+    --include "StrategyPattern1.java"        \
+    --include "StrategyPattern2.java"        \
+    --include "StrategyPattern3.java"        \
+    --include "StrategyPattern4.java"        \
+    --include "StrategyPattern5.java"        \
+    --include "StrategyPattern6.java"        \
+    --exclude "*"                            \
+    ../../patterns/java/ patterns
+	@rsync -r -t -u -v --delete              \
     --include "Collatz.py"                   \
     --include "RunCollatz.in"                \
     --include "RunCollatz.py"                \
