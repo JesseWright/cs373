@@ -78,6 +78,7 @@ push:
 	git add Dockerfile
 	git add examples
 	git add exercises
+	git add patterns
 	git add projects
 	git add makefile
 	git add notes
