@@ -145,6 +145,12 @@ sync:
     --exclude "*"                            \
     ../../examples/sql/ examples
 	@rsync -r -t -u -v --delete              \
+    --include "MethodOverriding1.java"       \
+    --include "MethodOverriding2.java"       \
+    --include "DynamicBinding.java"          \
+    --exclude "*"                            \
+    ../../examples/java/ examples
+	@rsync -r -t -u -v --delete              \
     --include "UnitTests1.py"                \
     --include "UnitTests1T.py"               \
     --include "UnitTests2.py"                \
@@ -196,6 +202,7 @@ sync:
     --include "StrategyPattern4.java"        \
     --include "StrategyPattern5.java"        \
     --include "StrategyPattern6.java"        \
+    --include "SingletonPatternT.java"       \
     --exclude "*"                            \
     ../../patterns/java/ patterns
 	@rsync -r -t -u -v --delete              \
