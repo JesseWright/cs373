@@ -6,16 +6,22 @@ class Movie {
     public Movie (String title, int priceCode) {
         ...}}
 
-class RegulareMovie extends Movie {
-    public RegulareMovie (String title) {
+class RegularMovie extends Movie {
+    public RegularMovie (String title) {
         super(title, Movie.Regular)}
 
     public int getCharge () {
         ...}}
 
+x.addRental(new Rental(new Movie("Shane", Movie.REGULAR), 2));
+
+// would become
+
+x.addRental(new Rental(new RegularMovie("Shane")));
+
 abstract class Price {
     abstract int getCharge ();}
 
-class RegularePrice extends Price {
+class RegularPrice extends Price {
     public int getCharge () {
         ...}}
