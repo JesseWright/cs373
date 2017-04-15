@@ -2,7 +2,7 @@
 // Wed, 12 Apr
 // -----------
 
-class Movie {
+abstract class Movie {
     public Movie (String title, int priceCode) {
         ...}}
 
