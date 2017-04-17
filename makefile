@@ -145,9 +145,9 @@ sync:
     --exclude "*"                            \
     ../../examples/sql/ examples
 	@rsync -r -t -u -v --delete              \
-    --include "MethodOverriding1.java"       \
-    --include "MethodOverriding2.java"       \
+    --include "MethodOverriding.java"        \
     --include "DynamicBinding.java"          \
+    --include "Reflection.java"              \
     --exclude "*"                            \
     ../../examples/java/ examples
 	@rsync -r -t -u -v --delete              \
@@ -203,6 +203,7 @@ sync:
     --include "StrategyPattern5.java"        \
     --include "StrategyPattern6.java"        \
     --include "SingletonPatternT.java"       \
+    --include "StrategyPattern7.java"        \
     --exclude "*"                            \
     ../../patterns/java/ patterns
 	@rsync -r -t -u -v --delete              \
