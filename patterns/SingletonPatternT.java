@@ -24,14 +24,3 @@ public final class SingletonPatternT extends TestCase {
 
     public static void main (String[] args) {
         TestRunner.run(new TestSuite(SingletonPatternT.class));}}
-
-/*
-% javac -Xlint SingletonPattern.java SingletonPatternT.java
-
-% java -ea SingletonPatternT
-....
-Time: 0.001
-
-OK (4 tests)
-
-*/
