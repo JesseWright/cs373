@@ -202,6 +202,7 @@ sync:
     --include "StrategyPattern4.java"        \
     --include "StrategyPattern5.java"        \
     --include "StrategyPattern6.java"        \
+    --include "SingletonPattern.java"        \
     --include "SingletonPatternT.java"       \
     --include "StrategyPattern7.java"        \
     --exclude "*"                            \
