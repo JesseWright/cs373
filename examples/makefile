@@ -20,7 +20,8 @@ FILES :=              \
     FunctionDict      \
     Callables         \
     MyPy              \
-    RegExps
+    RegExps           \
+    Reflection
 
 ifeq ($(shell uname), Darwin)          # Apple
     PYTHON   := python3.5

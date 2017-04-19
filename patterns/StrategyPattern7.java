@@ -199,9 +199,9 @@ class Customer {
             " frequent renter points";
         return result;}}
 
-final class Store7 {
+final class StrategyPattern7 {
     public static void main (String[] args) {
-        System.out.println("Store7.java");
+        System.out.println("StrategyPattern7.java");
 
         Customer x = new Customer("Penelope");
         assert x.statement().equals(

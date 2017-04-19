@@ -117,6 +117,7 @@ sync:
     --include "Callables.py"                 \
     --include "MyPy.py"                      \
     --include "RegExps.py"                   \
+    --include "Reflection.py"                \
     --exclude "*"                            \
     ../../examples/python/ examples
 	@rsync -r -t -u -v --delete              \
@@ -209,6 +210,10 @@ sync:
     --include "StrategyPattern9.java"        \
     --exclude "*"                            \
     ../../patterns/java/ patterns
+	@rsync -r -t -u -v --delete              \
+    --include "StrategyPattern9.py"          \
+    --exclude "*"                            \
+    ../../patterns/python/ patterns
 	@rsync -r -t -u -v --delete              \
     --include "Collatz.py"                   \
     --include "RunCollatz.in"                \
