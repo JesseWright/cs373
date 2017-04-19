@@ -205,6 +205,8 @@ sync:
     --include "SingletonPattern.java"        \
     --include "SingletonPatternT.java"       \
     --include "StrategyPattern7.java"        \
+    --include "StrategyPattern8.java"        \
+    --include "StrategyPattern9.java"        \
     --exclude "*"                            \
     ../../patterns/java/ patterns
 	@rsync -r -t -u -v --delete              \
