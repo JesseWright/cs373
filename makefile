@@ -208,6 +208,9 @@ sync:
     --include "StrategyPattern7.java"        \
     --include "StrategyPattern8.java"        \
     --include "StrategyPattern9.java"        \
+    --include "CreationalPattern.java"       \
+    --include "FactoryMethodPatternT.java"   \
+    --include "AbstractFactoryPatternT.java" \
     --exclude "*"                            \
     ../../patterns/java/ patterns
 	@rsync -r -t -u -v --delete              \
