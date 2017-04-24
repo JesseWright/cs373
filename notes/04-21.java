@@ -1,8 +1,8 @@
-# -----------
-# Fri, 21 Apr
-# -----------
+// -----------
+// Fri, 21 Apr
+// -----------
 
-# return types are covariant
+// return types are covariant
 
 class Game {
     Maze createMaze () {
