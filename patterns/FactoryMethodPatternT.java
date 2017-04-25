@@ -1,6 +1,6 @@
-// -------------------------
-// FactoryMethodPattern.java
-// -------------------------
+// --------------------------
+// FactoryMethodPatternT.java
+// --------------------------
 
 // http://en.wikipedia.org/wiki/Factory_method_pattern
 

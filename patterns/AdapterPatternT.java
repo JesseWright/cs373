@@ -1,6 +1,6 @@
-// -------------------
-// AdapterPattern.java
-// -------------------
+// --------------------
+// AdapterPatternT.java
+// --------------------
 
 // http://en.wikipedia.org/wiki/Adapter_pattern
 

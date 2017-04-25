@@ -2,14 +2,8 @@
 // CreationalPattern.java
 // ----------------------
 
-// http://en.wikipedia.org/wiki/Creational_pattern
-
 import java.util.ArrayList;
 import java.util.List;
-
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
-import junit.textui.TestRunner;
 
 class Room {}
 class EnchantedRoom extends Room {}
@@ -60,19 +54,3 @@ abstract class Game {
         m.addDoor(new EnchantedDoor(m.room(0), m.room(1)));
         m.addDoor(new EnchantedDoor(m.room(1), m.room(2)));
         return m;}}
-
-public final class CreationalPattern extends TestCase {
-    public void test_1 () {
-        Maze m = Game.createMaze();
-        assertEquals(Maze.class,         m.getClass());
-        assertEquals(Room.class, m.room(0).getClass());
-        assertEquals(Door.class, m.door(0).getClass());}
-
-    public void test_2 () {
-        Maze m = Game.createEnchantedMaze();
-        assertEquals(Maze.class,                  m.getClass());
-        assertEquals(EnchantedRoom.class, m.room(0).getClass());
-        assertEquals(EnchantedDoor.class, m.door(0).getClass());}
-
-    public static void main (String[] args) {
-        TestRunner.run(new TestSuite(CreationalPatternT.class));}}

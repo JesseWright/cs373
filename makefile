@@ -209,6 +209,7 @@ sync:
     --include "StrategyPattern8.java"        \
     --include "StrategyPattern9.java"        \
     --include "CreationalPattern.java"       \
+    --include "CreationalPatternT.java"      \
     --include "FactoryMethodPattern.java"    \
     --include "FactoryMethodPatternT.java"   \
     --include "AbstractFactoryPatternT.java" \
