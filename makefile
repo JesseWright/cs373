@@ -212,7 +212,7 @@ sync:
     --include "CreationalPatternT.java"      \
     --include "FactoryMethodPattern.java"    \
     --include "FactoryMethodPatternT.java"   \
-    --include "AbstractFactoryPattern.java " \
+    --include "AbstractFactoryPattern.java"  \
     --include "AbstractFactoryPatternT.java" \
     --include "AdapterPattern.java"          \
     --include "AdapterPatternT.java"         \
