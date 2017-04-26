@@ -1,36 +1,37 @@
 // -----------
-// Mon, 24 Apr
+// Wed, 26 Apr
 // -----------
 
-abstract class Game {
-    static Maze createMaze (MazeFactory mf) {
-        ...mf.getRoom()...
-        ...mf.getDoor()...
+interface List<T> {
+    T       first  ();
+    List<T> rest   ();
+    int     length ();
+    int     count  (T v);}
 
-class MazeFactory {
-    Room getRoom () {
-        return new Room();}
-    ...}
+class Nil<T> implements List<T> {
+    T       first ()    {throw ...;}
+    List<T> rest ()     {return this;}
+    int     length ()   {return 0;}
+    int     count (T v) {return 0;}}
 
-class EnchantedMazeFactory exteds MazeFactory {
-    EnchantedRoom getRoom () {
-        return new EnchantedRoom();}
-    ...}
+class Cons<T> implements List<T> {
+    T       _f;
+    List<T> _r;
 
-class Stack<T> {
-    private List<T> x;
-    public Stack () {
-        x = new ArrayList<T>();}
-    public void pop (T v) {
-        // remove from the back of the ArrayList: O(1)
-    public void push (T v) {
-        // add    to   the back of the ArrayList: amortized O(1)
+    Cons (T f, List<T> r) {
+        _f = f;
+        _r = r;}
 
-class Queue<T> {
-    private List<T> x;
-    public Stack () {
-        x = new LinkedList<T>();}
-    public void pop (T v) {
-        // remove from the front of the LinkedList: O(1)
-    public void push (T v) {
-        // add    to   the back  of the LinkedList: O(1)
+    T first () {
+        return _f;}
+
+    List<T> rest () {
+        return _r;}
+
+    int length () {
+        return 1 + _r.length();}
+
+    int count (T v) {
+        if (Objects.equals(_f, v))
+            return 1 + _r.count(v);
+        return _r.count();}
