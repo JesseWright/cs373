@@ -216,7 +216,9 @@ sync:
     --include "AbstractFactoryPatternT.java" \
     --include "AdapterPattern.java"          \
     --include "AdapterPatternT.java"         \
+    --include "VisitorPattern1.java"        \
     --include "VisitorPattern1T.java"        \
+    --include "VisitorPattern2.java"        \
     --include "VisitorPattern2T.java"        \
     --exclude "*"                            \
     ../../patterns/java/ patterns
