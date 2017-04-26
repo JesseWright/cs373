@@ -216,6 +216,8 @@ sync:
     --include "AbstractFactoryPatternT.java" \
     --include "AdapterPattern.java"          \
     --include "AdapterPatternT.java"         \
+    --include "VisitorPattern1T.java"        \
+    --include "VisitorPattern2T.java"        \
     --exclude "*"                            \
     ../../patterns/java/ patterns
 	@rsync -r -t -u -v --delete              \

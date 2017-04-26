@@ -2,7 +2,7 @@
 // AbstractFactoryPatternT.java
 // ----------------------------
 
-// http://en.wikipedia.org/wiki/Abstract_factory_pattern
+// https://en.wikipedia.org/wiki/Abstract_factory_pattern
 
 @SuppressWarnings("auxiliaryclass")
 final class AbstractFactoryPatternT {

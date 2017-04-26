@@ -2,7 +2,7 @@
 // CreationalPatternT.java
 // -----------------------
 
-// http://en.wikipedia.org/wiki/Creational_pattern
+// https://en.wikipedia.org/wiki/Creational_pattern
 
 import junit.framework.TestCase;
 import junit.framework.TestSuite;

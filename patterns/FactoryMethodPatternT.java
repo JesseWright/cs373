@@ -2,7 +2,7 @@
 // FactoryMethodPatternT.java
 // --------------------------
 
-// http://en.wikipedia.org/wiki/Factory_method_pattern
+// https://en.wikipedia.org/wiki/Factory_method_pattern
 
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
