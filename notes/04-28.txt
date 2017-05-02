@@ -1,0 +1,55 @@
+-----------
+Fri, 28 Apr
+-----------
+
+10am
+
+It's Launch Time
+http://itslaunchti.me
+improvement over https://launchlibrary.net
+models
+	agencies
+	launches
+	locations
+	missions
+
+Artistry
+http://artistree.me
+models
+	artists
+	eras
+	media
+	works
+
+Food Close to Me
+http://foodcloseto.me
+models
+	food types
+	locations
+	reviews
+
+11am
+
+Basketball Mania
+http://basketballmania.me
+models
+	games
+	players
+	teams
+	venues
+
+Game of Thrones
+http://gotthrones.me
+models
+	alliances
+	books
+	characters
+	houses
+
+Eklogi
+http://eklogi.me
+models
+	bills
+	committees
+	members
+	votes

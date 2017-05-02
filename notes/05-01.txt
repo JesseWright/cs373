@@ -1,0 +1,55 @@
+-----------
+Mon,  1 May
+-----------
+
+10am
+
+SWEatshop
+http://sweatshop.tech
+models
+	companies
+	investors
+	people
+	schools
+
+Marvel
+http://www.marveldbs.me
+models
+	characters
+	comics
+	creators
+	series
+
+Reddiful
+http://reddifulapi.me
+models
+	comments
+	redditors
+	subredits
+	submissions
+
+11am
+
+YouTube SWE
+http://www.youtubesweg.me
+models
+	categories
+	channels
+	playlists
+	videos
+
+GGno SWE
+http://ggnoswe.me
+models
+	games
+	platforms
+	reviews
+	studios
+
+Magic
+http://magicdb.me
+models
+	artists
+	cards
+	sets
+	subtypes
